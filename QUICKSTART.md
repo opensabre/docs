@@ -90,5 +90,7 @@ root@xxxxx # curl http://localhost:8080/test/hello?name=zhangsan
 
 ## 文档
 
-文档地址：`http://localhost:8080/swagger-ui/index.html`
+swagger文档地址：`http://localhost:8080/swagger-ui/index.html`
+
+项目地址：`https://github.com/opensabre/examples/sample`
 
