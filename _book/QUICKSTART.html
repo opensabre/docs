@@ -497,6 +497,74 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="&#x5FEB;&#x901F;&#x5165;&#x95E8;">&#x5FEB;&#x901F;&#x5165;&#x95E8;</h1>
+<h2 id="&#x5F00;&#x53D1;">&#x5F00;&#x53D1;</h2>
+<h3 id="1-&#x5F15;&#x5165;starter&#x5305;">1. &#x5F15;&#x5165;starter&#x5305;</h3>
+<p>gradle&#x4F9D;&#x8D56;&#x5F15;&#x5165;<code>implementation &apos;io.github.opensabre:opensabre-base-starter:0.0.3&apos;</code></p>
+<pre><code>plugins {
+    id &apos;java&apos;
+    id &apos;org.springframework.boot&apos; version &apos;2.7.5&apos;
+    id &apos;io.spring.dependency-management&apos; version &apos;1.0.15.RELEASE&apos;
+}
+
+group = &apos;io.github.opensabre&apos;
+version = &apos;0.0.1-SNAPSHOT&apos;
+sourceCompatibility = &apos;11&apos;
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation &apos;io.github.opensabre:opensabre-base-starter:0.0.3&apos;
+    testImplementation &apos;org.springframework.boot:spring-boot-starter-test&apos;
+}
+
+tasks.named(&apos;test&apos;) {
+    useJUnitPlatform()
+}
+</code></pre><p>maven&#x5F15;&#x5165;</p>
+<pre><code>&lt;!-- opensabre starter --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;io.github.opensabre&lt;/groupId&gt;
+    &lt;artifactId&gt;opensabre-base-starter&lt;/artifactId&gt;
+    &lt;version&gt;0.0.3&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre><h3 id="2-&#x589E;&#x52A0;&#x914D;&#x7F6E;&#x9879;">2. &#x589E;&#x52A0;&#x914D;&#x7F6E;&#x9879;</h3>
+<p>&#x914D;&#x7F6E;&#x6587;&#x4EF6;<code>application.properties</code>&#x4E2D;&#x8BBE;&#x7F6E;&#x7AEF;&#x53E3;&#x548C;&#x5E94;&#x7528;&#x540D;&#x914D;&#x7F6E;&#x9879;</p>
+<pre><code>server.port=8080                    #&#x5E94;&#x7528;&#x7AEF;&#x53E3;
+spring.application.name=base-sample #&#x5E94;&#x7528;&#x540D;
+</code></pre><h3 id="3-&#x6DFB;&#x52A0;restcontroller">3. &#x6DFB;&#x52A0;RestController</h3>
+<pre><code class="lang-java"><span class="hljs-keyword">package</span> io.github.opensabre.sample.rest;
+
+<span class="hljs-keyword">import</span> io.github.opensabre.common.core.entity.vo.Result;
+<span class="hljs-keyword">import</span> io.swagger.v3.oas.annotations.Operation;
+<span class="hljs-keyword">import</span> io.swagger.v3.oas.annotations.tags.Tag;
+<span class="hljs-keyword">import</span> lombok.extern.slf4j.Slf4j;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.GetMapping;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RequestMapping;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RequestParam;
+<span class="hljs-keyword">import</span> org.springframework.web.bind.annotation.RestController;
+
+<span class="hljs-meta">@RestController</span>
+<span class="hljs-meta">@RequestMapping</span>(<span class="hljs-string">&quot;/test&quot;</span>)
+<span class="hljs-meta">@Tag</span>(name = <span class="hljs-string">&quot;test&quot;</span>)
+<span class="hljs-meta">@Slf</span>4j
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HelloController</span> </span>{
+
+
+    <span class="hljs-meta">@Operation</span>(summary = <span class="hljs-string">&quot;&#x6D4B;&#x8BD5;&#x63A5;&#x53E3;&quot;</span>, description = <span class="hljs-string">&quot;hello xxx&quot;</span>)
+    <span class="hljs-meta">@GetMapping</span>(<span class="hljs-string">&quot;/hello&quot;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">public</span> Result <span class="hljs-title">hello</span><span class="hljs-params">(@RequestParam String name)</span> </span>{
+        <span class="hljs-keyword">return</span> Result.success(<span class="hljs-string">&quot;Hello:&quot;</span> + name);
+    }
+}
+</code></pre>
+<h2 id="&#x6D4B;&#x8BD5;">&#x6D4B;&#x8BD5;</h2>
+<pre><code class="lang-shell">root@xxxxx # curl http://localhost:8080/test/hello?name=zhangsan
+{&quot;code&quot;:&quot;000000&quot;,&quot;mesg&quot;:&quot;&#x5904;&#x7406;&#x6210;&#x529F;&quot;,&quot;time&quot;:&quot;2022-11-22T14:46:58.826435Z&quot;,&quot;data&quot;:&quot;Hello:zhangsan&quot;}
+</code></pre>
+<h2 id="&#x6587;&#x6863;">&#x6587;&#x6863;</h2>
+<p>&#x6587;&#x6863;&#x5730;&#x5740;&#xFF1A;<code>http://localhost:8080/swagger-ui/index.html</code></p>
 
                                 
                                 </section>
@@ -540,7 +608,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"快速入门","level":"1.3","depth":1,"next":{"title":"系统架构","level":"1.4","depth":1,"path":"architecture/README.md","ref":"architecture/README.md","articles":[{"title":"组件简介","level":"1.4.1","depth":2,"path":"architecture/COMPONENT.md","ref":"architecture/COMPONENT.md","articles":[]},{"title":"应用架构","level":"1.4.2","depth":2,"path":"architecture/APPLICATION.md","ref":"architecture/APPLICATION.md","articles":[]}]},"previous":{"title":"版本说明","level":"1.2","depth":1,"path":"VERSONS.md","ref":"VERSONS.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hide-element","chapter-fold","code","splitter","-lunr","-search","search-pro","pageview-count","back-to-top-button","livereload"],"pluginsConfig":{"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"QUICKSTART.md","mtime":"2022-11-17T13:25:06.207Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-22T14:08:04.579Z"},"basePath":".","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"快速入门","level":"1.3","depth":1,"next":{"title":"系统架构","level":"1.4","depth":1,"path":"architecture/README.md","ref":"architecture/README.md","articles":[{"title":"组件简介","level":"1.4.1","depth":2,"path":"architecture/COMPONENT.md","ref":"architecture/COMPONENT.md","articles":[]},{"title":"应用架构","level":"1.4.2","depth":2,"path":"architecture/APPLICATION.md","ref":"architecture/APPLICATION.md","articles":[]}]},"previous":{"title":"版本说明","level":"1.2","depth":1,"path":"VERSONS.md","ref":"VERSONS.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["hide-element","chapter-fold","code","splitter","-lunr","-search","search-pro","pageview-count","back-to-top-button","livereload"],"pluginsConfig":{"chapter-fold":{},"livereload":{},"splitter":{},"search-pro":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"pageview-count":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"QUICKSTART.md","mtime":"2022-11-22T14:55:26.102Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-11-22T14:56:18.209Z"},"basePath":".","book":{"language":""}});
         });
     </script>
 </div>
