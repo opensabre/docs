@@ -13,6 +13,9 @@
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <!-- 默认主题 -->
     <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/lib/themes/vue.css">
+
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css">
+
 </head>
 
 <body>
@@ -41,6 +44,21 @@
     <script>
         // 搜索配置(url：https://docsify.js.org/#/zh-cn/plugins?id=%e5%85%a8%e6%96%87%e6%90%9c%e7%b4%a2-search)
         window.$docsify = {
+            darklightTheme: {
+              defaultTheme: 'light',
+              siteFont: 'Source Sans Pro,Helvetica Neue,Arial,sans-serif',
+              codeFontFamily: 'Roboto Mono, Monaco, courier, monospace',
+              bodyFontSize: '15px',
+              dark: {
+                  background: 'rgb(28,32,34)',
+                  highlightColor: '#e96900',
+                  codeBackgroundColor: 'rgb(34,39,46)',
+                  codeTextColor: '#b4b4b4',
+              },
+              light: {
+                  highlightColor: '#e96900',
+              }
+            },
             search: {
                 maxAge: 86400000,// 过期时间，单位毫秒，默认一天
                 paths: auto,// 注意：仅适用于 paths: 'auto' 模式
@@ -67,6 +85,19 @@
     <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
     <!--在所有的代码块上添加一个简单的Click to copy按钮来允许用户从你的文档中轻易地复制代码-->
     <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+    <!--白天/夜间模式切换-->
+    <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
+    <!--代码高亮-->
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-json.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-java.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-bash.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-yaml.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-sql.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-xml-doc.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-properties.min.js"></script>
+    <!-- 上一篇/下一篇 -->
+    <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+    
 </body>
 
 </html>
