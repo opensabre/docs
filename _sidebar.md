@@ -1,5 +1,6 @@
 * [项目介绍](README.md)
     * [工程介绍](introduction/README.md)
+    * [依赖说明](introduction/dependencies.md)
 * [版本说明](VERSONS.md)
 * [快速入门](QUICKSTART.md)
 * [系统架构](architecture/README.md)
@@ -7,7 +8,7 @@
   * [应用架构](architecture/APPLICATION.md)
 * 使用说明
 * [开发指南](develop/README.md)
-    * [环境搭建](develop/base/README.md)
+    * [环境搭建](develop/env/README.md)
     * [基础组件](develop/common/README.md)
         * common-core
         * common-web

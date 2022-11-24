@@ -2,15 +2,15 @@
 
 ## 简介
 
+​		本例快速使用opensabre starter构建一个基础应用。
 
+## 前置
 
-## 依赖
-
-| 依赖软件      | 要求     | 备注                      |
-| ------------- | -------- | ------------------------- |
-| java          | 11+      |                           |
-| mq            | rabbitmq | 默认账号密码：guest/guest |
-| 注册/配置中心 | nacos    |                           |
+| 依赖软件      | 要求     | 备注                                                    |
+| ------------- | -------- | ------------------------------------------------------- |
+| java          | 11+      | 必须                                                    |
+| mq            | rabbitmq | 默认账号密码：guest/guest，如没有，启动报错，不影响使用 |
+| 注册/配置中心 | nacos    | 非必须，如没有，启动报错，不影响使用                    |
 
 ## 开发
 
@@ -18,7 +18,7 @@
 
 gradle依赖引入`implementation 'io.github.opensabre:opensabre-base-starter:0.0.3'`
 
-```
+```ASN.1
 plugins {
     id 'java'
     id 'org.springframework.boot' version '2.7.5'
@@ -41,12 +41,11 @@ dependencies {
 tasks.named('test') {
     useJUnitPlatform()
 }
-
 ```
 
 maven引入
 
-```
+```xml
 <!-- opensabre starter -->
 <dependency>
 	<groupId>io.github.opensabre</groupId>
@@ -83,7 +82,6 @@ import org.springframework.web.bind.annotation.RestController;
 @Tag(name = "test")
 @Slf4j
 public class HelloController {
-
 
     @Operation(summary = "测试接口", description = "hello xxx")
     @GetMapping("/hello")

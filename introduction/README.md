@@ -7,7 +7,7 @@
 | common   | 通用依赖包，一般打包为jar或pom，通过pom依赖引入 | 项目发布地址：https://mvnrepository.com/search?q=opensabre |
 | base     | 基础设施应用，一般为web应用，通过接口提供服务。 |                                                            |
 | docs     | 文档类工程                                      | 逐渐更新中                                                 |
-| examples | 工程例子                                        | 待创建                                                     |
+| examples | 工程例子                                        | 逐渐增加中                                                 |
 
 ## 工程项目介绍
 
