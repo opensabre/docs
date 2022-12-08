@@ -2,7 +2,7 @@
 
 ## 简介
 
-​		本例快速使用opensabre starter构建一个基础应用。
+​		本例快速使用opensabre starter构建一个新应用。
 
 ## 前置
 
