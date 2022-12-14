@@ -6,3 +6,5 @@ RBAC权限管理、授权认证、网关管理、服务治理、审计日志等�
 
 用，支持Docker、Kubenetes的部署。让项目开发快速进入业务开发，而不需过多时间花费在架构搭建和编码风格规范上。
 
+[![Stargazers over time](https://starchart.cc/zhoutaoo/SpringCloud.svg)](https://starchart.cc/zhoutaoo/SpringCloud)
+

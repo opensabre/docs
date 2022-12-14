@@ -7,12 +7,24 @@
   * [组件简介](framework/architecture/COMPONENT.md)
   * [应用架构](framework/architecture/APPLICATION.md)
 * [**开发指南**](framework/develop/README.md)
-    * [环境搭建](framework/develop/STARTUP.md)
+    * [基础模块](framework/develop/STARTUP.md)
+        * [注册中心](framework/develop/base/discovery.md)
+        * 配置中心
+        * 动态路由
+        * 日志组件
+        * 多级缓存
+        * 事件中心
+        * 远程调用
+        * 持久化
+        * 统一异常处理
+        * 统一REST报文
+        * 统一返回/错误码
+        * 灰度发布
+        * API文档
     * [基础组件](framework/develop/README.md)
-        * common-core
         * common-web
         * common-test
-    * 开发规范
+    * [开发规范](framework/develop/standardized.md)
 * [部署运维](framework/DEVOPS.md)
 * [路线蓝图](framework/ROADMAP.md)
 * [常见问题](framework/QUESTION.md)
