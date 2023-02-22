@@ -10,8 +10,10 @@
     * [基础应用](develop/base/README.md)
       * base-organization
       * base-authorization
-      * gateway-web
-      * gateway-admin
+      * base-sysadmin
+      * base-authorization
+      * base-gateway-web
+      * base-gateway-admin
 * 生产部署
 * [部署运维](part2/README.md)
 * [常见问题](QUESTION.md)
