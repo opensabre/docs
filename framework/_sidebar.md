@@ -1,31 +1,39 @@
 * [**项目介绍**](framework/introduction/README.md)
-    * [工程介绍](framework/introduction/PROJECT.md)
-    * [依赖说明](framework/introduction/dependencies.md)
-* [版本说明](framework/VERSONS.md)
+  * [工程介绍](framework/introduction/PROJECT.md)
+  * [依赖说明](framework/introduction/dependencies.md)
+* [**版本说明**](framework/VERSONS.md)
 * [**用户手册**](framework/manual/README.md)
   * [快速入门](framework/manual/QUICKSTART.md)
+  * [基础模块](framework/develop/README.md)
+      - [注册中心](framework/develop/base/discovery.md)
+      - [配置中心]()
+      - [动态路由]()
+      - [日志组件]()
+      - [多级缓存]()
+      - [事件中心]()
+      - [远程调用]()
+      - [服务治理]()
+      - [数据持久化]()
+      - [数据校验]()
+      - [统一异常处理]()
+      - [统一REST报文]()
+      - [统一返回/错误码]()
+      - [灰度发布]()
+      - [API文档]()
 * [**系统架构**](framework/architecture/README.md)
   * [组件简介](framework/architecture/COMPONENT.md)
   * [应用架构](framework/architecture/APPLICATION.md)
 * [**开发指南**](framework/develop/README.md)
-    * [基础模块](framework/develop/STARTUP.md)
-        * [注册中心](framework/develop/base/discovery.md)
-        * 配置中心
-        * 动态路由
-        * 日志组件
-        * 多级缓存
-        * 事件中心
-        * 远程调用
-        * 持久化
-        * 统一异常处理
-        * 统一REST报文
-        * 统一返回/错误码
-        * 灰度发布
-        * API文档
-    * [基础组件](framework/develop/README.md)
-        * common-web
-        * common-test
-    * [开发规范](framework/develop/standardized.md)
+  * [基础模块](framework/develop/README.md)
+      * opensabre-web
+      * opensabre-test
+  * [starter](framework/develop/STARTUP.md)
+      * [注册中心](framework/develop/base/discovery.md)
+      * 配置中心
+      * 动态路由
+      * 日志组件
+      * 多级缓存
+  * [开发规范](framework/develop/standardized.md)
 * [部署运维](framework/DEVOPS.md)
 * [路线蓝图](framework/ROADMAP.md)
 * [常见问题](framework/QUESTION.md)

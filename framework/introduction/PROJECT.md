@@ -8,7 +8,7 @@ Gitee地址：https://gitee.com/opensabre/opensabre-framework
 
 ## 子工程介绍
 
-| moudle名称                    | 子目录                           | 主要功能及用途                                                 |
+| module名称                    | 子目录                           | 主要功能及用途                                                 |
 | -----------------------------| ------------------------------- | ------------------------------------------------------------ |
 | opensabre-base-release       | opensabre-base-release          |  opensabre服务框架父工程，定义通用配置，如打包、仓库、发布等各模块配置  |
 | opensabre-base-dependencies  | opensabre-base-dependencies     |  opensabre服务框架工程的依赖管理，如版本、配置等定义  |
