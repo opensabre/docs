@@ -2,21 +2,21 @@
 
 ## 简介
 
-​		本例快速使用opensabre starter构建一个新应用。
+本例快速使用opensabre-starter-boot构建一个springboot新应用，默认集成统一异常、统一报文、文档等基础组件和规范。
+
+项目地址：`https://github.com/opensabre/examples/sample`
 
 ## 前置
 
-| 依赖软件      | 要求     | 备注                                                    |
-| ------------- | -------- | ------------------------------------------------------- |
-| java          | 11+      | 必须                                                    |
-| mq            | rabbitmq | 默认账号密码：guest/guest，如没有，启动报错，不影响使用 |
-| 注册/配置中心 | nacos    | 非必须，如没有，启动报错，不影响使用                    |
+| 依赖软件        | 要求     | 备注                                                  |
+| ------------- | -------- | ---------------------------------------------------- |
+| java          | 11+      | 必须                                                  |
 
 ## 开发
 
 ### 1. 引入starter包
 
-gradle依赖引入`implementation 'io.github.opensabre:opensabre-base-starter:0.0.3'`
+gradle依赖引入`implementation 'io.github.opensabre:opensabre-starter-boot:0.0.5'`
 
 ```ASN.1
 plugins {
@@ -34,7 +34,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.github.opensabre:opensabre-base-starter:0.0.3'
+    implementation 'io.github.opensabre:opensabre-starter-boot:0.0.5'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
@@ -49,8 +49,8 @@ maven引入
 <!-- opensabre starter -->
 <dependency>
 	<groupId>io.github.opensabre</groupId>
-	<artifactId>opensabre-base-starter</artifactId>
-	<version>0.0.3</version>
+	<artifactId>opensabre-starter-boot</artifactId>
+	<version>0.0.5</version>
 </dependency>
 ```
 
@@ -83,10 +83,10 @@ import org.springframework.web.bind.annotation.RestController;
 @Slf4j
 public class HelloController {
 
-    @Operation(summary = "测试接口", description = "hello xxx")
-    @GetMapping("/hello")
-    public Result hello(@RequestParam String name) {
-        return Result.success("Hello:" + name);
+    @Operation(summary = "测试接口1", description = "hello xxx")
+    @GetMapping("/echo")
+    public String echo(@RequestParam String name) {
+        return "Hello:" + name;
     }
 }
 ```
@@ -94,13 +94,10 @@ public class HelloController {
 ## 测试
 
 ```shell
-root@xxxxx # curl http://localhost:8080/test/hello?name=zhangsan
+root@xxxxx # curl http://localhost:8080/test/echo?name=zhangsan
 {"code":"000000","mesg":"处理成功","time":"2022-11-22T14:46:58.826435Z","data":"Hello:zhangsan"}
 ```
 
 ## 文档
 
 swagger文档地址：`http://localhost:8080/swagger-ui/index.html`
-
-项目地址：`https://github.com/opensabre/examples/sample`
-
