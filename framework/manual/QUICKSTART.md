@@ -4,7 +4,7 @@
 
 本例快速使用opensabre-starter-boot构建一个springboot新应用，默认集成统一异常、统一报文、文档等基础组件和规范。
 
-项目地址：`https://github.com/opensabre/examples/sample`
+项目地址：`https://github.com/opensabre/examples/sample-boot`
 
 ## 前置
 
