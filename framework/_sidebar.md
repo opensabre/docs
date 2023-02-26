@@ -1,4 +1,4 @@
-* [**项目介绍**](framework/introduction/README.md)
+* [**项目介绍**](framework/README.md)
   * [工程介绍](framework/introduction/PROJECT.md)
   * [依赖说明](framework/introduction/dependencies.md)
 
@@ -7,8 +7,8 @@
 * [**用户手册**](framework/manual/README.md)
   * [快速入门](framework/manual/QUICKSTART.md)
   * [基础能力](framework/manual/base/README.md)
-    * [日志组件](framework/manual/base/log.md)
-    * [数据校验](framework/manual/base/validation.md)
+    * [日志打印/追踪](framework/manual/base/log.md)
+    * [表单数据校验](framework/manual/base/validation.md)
     * [统一异常处理](framework/manual/base/exception.md)
     * [统一REST报文](framework/manual/base/response.md)
     * [统一响应码](framework/manual/base/returncode.md)
