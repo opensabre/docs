@@ -2,7 +2,6 @@
 
 ## 简介
 
-
 ⽇常项⽬开发中，对于前端提交的表单，后台接⼝接收到表单数据后，通常会加⼊业务参数的合法校验操作来增加安全性。
 
 springboot中使用spring-boot-starter-validation进行了数据校验的⼯作。
@@ -15,7 +14,6 @@ opensabre-framework默认包含了数据校验的模块并对其进行主扩展�
 项目地址：`https://github.com/opensabre/examples/sample-boot`
 
 示例文件：`https://github.com/opensabre/examples/sample-boot/src/java/io/github/opensabre/sample/rest/ValidController.java`
-
 
 ## 前置
 
@@ -102,8 +100,10 @@ public class ValidForm extends BaseForm {
     @Max(value = 120, message = "年龄不能大于120周岁", groups = {Add.class})
     private int age;
 
-    @Schema(title = "时间")
-    @Past(groups = {Add.class, Save.class})
+    @Schema(title = "时间", example = "2023-02-22 14:56:10")
+    @Past(groups = {Add.class, Save.class}, message = "时间格式为yyyy-MM-dd HH:mm:ss，并且不能为将来的时间")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date time;
 
     @Schema(title = "手机号")
@@ -210,7 +210,7 @@ curl -X 'POST' \
 {
     "code":"000000",
     "mesg":"处理成功",
-    "time":"2022-11-22T14:46:58.826435Z",
+    "time":"2022-11-22 14:46:58.826",
     "data": "类型只能为Last、Second、First"
 }
 ```
