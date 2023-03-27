@@ -18,7 +18,7 @@
 
 gradle依赖引入`implementation 'io.github.opensabre:opensabre-starter-boot:0.0.5'`
 
-```ASN.1
+```gradle
 plugins {
     id 'java'
     id 'org.springframework.boot' version '2.7.5'
@@ -95,7 +95,13 @@ public class HelloController {
 
 ```shell
 root@xxxxx # curl http://localhost:8080/test/echo?name=zhangsan
-{"code":"000000","mesg":"处理成功","time":"2022-11-22T14:46:58.826435Z","data":"Hello:zhangsan"}
+
+{   
+    "code":"000000",
+    "mesg":"处理成功",
+    "time":"2022-11-22T14:46:58.826435Z",
+    "data":"Hello:zhangsan"
+}
 ```
 
 ## 文档
