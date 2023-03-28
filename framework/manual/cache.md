@@ -2,14 +2,12 @@
 
 ## 简介
 
-在日常项目开发中，为了提高服务的并发和性能，缓存是非常常见且重要的手段。缓存是一种在内存中暂存数据的技术，以加快对这些数据的访问速度。
+<span>
+在日常项目开发中，为了提高服务的并发和性能，缓存是非常常见且重要的手段。缓存是一种在内存中暂存数据的技术，以加快对这些数据的访问速度。通过缓存，可以把经常用到的数据暂存在高速缓存中，以便下次访问时可以更快地获取。</br></br>
+opensabre-framework默认集成了caffeine，分别提供基于jvm和redis的多级缓存。并且opensabre-framework还内置了local(JVM)的1分钟、5分钟(默认)、2小时和remote(redis)5分钟、2小时(默认)、12小时供用户直接开箱即用。若有其它特殊需求，可通过自定义配置进行配置和扩展。
+</span>
 
-通过缓存，可以把经常用到的数据暂存在高速缓存中，以便下次访问时可以更快地获取。opensabre-framework默认集成了caffeine，分别提供基于jvm和redis的多级缓存。
-
-并且opensabre-framework还内置了local(JVM)的1分钟、5分钟(默认)、2小时和remote(redis)5分钟、2小时(默认)、12小时供用户直接开箱即用。若有其它特殊需求，
-
-可通过自定义配置进行配置和扩展。
-
+项目地址：`https://github.com/opensabre/examples/sample-cache`
 
 ## 前置
 
@@ -20,7 +18,7 @@
 | opensabre-starter-boot    | 0.0.5    | web项目用于测试                                   |
 | opensabre-starter-cache   | 0.0.5    | 必须                                             |
 
-## 开发使用
+## 开发
 
 ### 引入starter包
 
@@ -70,7 +68,7 @@ public class RemoteProvider {
 }
 ```
 
-2. `IConfigService.java` ，service接口
+2. `IConfigService.java` ，service接口，利用注解进行缓存。
 
 ```java
 package io.github.opensabre.sample.cache.service;
@@ -131,7 +129,7 @@ public class ConfigService implements IConfigService {
 }
 ```
 
-3. `CacheController.java` , controller
+3. `CacheController.java` , controller提供接口
 
 ```java
 package io.github.opensabre.sample.cache.rest;
@@ -195,7 +193,7 @@ swagger文档地址：`http://localhost:8080/swagger-ui/index.html`
 
 ### 默认缓存配置项
 
-*可通过环境变量注入自己redis地址和端口*，亦可在springboot配置文件中添加自己的缓存配置
+**可通过环境变量注入自己redis地址和端口，亦可在springboot配置文件中添加自己的缓存配置**
 
 ```yaml
 spring:
@@ -264,5 +262,4 @@ jetcache:
       uri: redis://${REDIS_HOST:localhost}:${REDIS_PORT:6379}
 ```
 
-
-
+{docsify-updated}

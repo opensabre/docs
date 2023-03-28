@@ -39,6 +39,7 @@
             mergeNavbar: true,
             // 滚动到锚点是与顶部的距离
             topMargin: 90,
+            auto2top: true,
         }
     </script>
     <script>
@@ -48,7 +49,7 @@
                 defaultTheme: 'light',
                 siteFont: 'Source Sans Pro,Helvetica Neue,Arial,sans-serif',
                 codeFontFamily: 'Roboto Mono, Monaco, courier, monospace',
-                bodyFontSize: '12px',
+                bodyFontSize: '14px',
                 dark: {
                     background: 'rgb(28,32,34)',
                     highlightColor: '#e96900',
@@ -98,11 +99,6 @@
               color: "var(--theme-color,#42b983)",
               height: "3px",
             },
-            footer: {
-                copy: '<span>Copyright &copy; 2021 &nbsp 💖 &nbsp</span>',
-                pre: '<hr/>',
-                style: 'font-size: 18px; text-align: center;',
-            },
             formatUpdated: '{MM}/{DD} {HH}:{mm}',
         }
     </script>
@@ -137,8 +133,6 @@
     <!-- 侧边栏扩展与折叠 -->
     <!-- <script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script> -->
     <script src="//unpkg.com/@zhg-x/docsify-plugins@1.0.2/src/scroll-to-top.js"></script>
-    <!-- 页脚 -->
-    <script src="//unpkg.com/docsify-footer-enh/dist/docsify-footer-enh.min.js"></script>
     <!-- 访问量统计 -->
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </body>
