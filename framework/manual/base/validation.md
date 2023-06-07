@@ -106,9 +106,9 @@ public class ValidForm extends BaseForm {
     @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date time;
 
-    @Schema(title = "手机号")
+    @Schema(title = "手机号1")
     @Pattern(regexp = "^1[3456789]\\d{9}$", groups = {Add.class}, message = "请输入正确的手机号")
-    private String mobile;
+    private String mobile1;
 
     @Schema(title = "类型")
     @EnumString(message = "类型只能为Last、Second、First", value = {"Last", "Second", "First"}, groups = {Add.class, Save.class})
@@ -171,6 +171,13 @@ curl -X 'POST' \
 ```
 
 ### 扩展校验规则
+
+#### 扩展校验相关注解
+
+| 注解           | 功能     |
+|---------------|----------|
+|@Mobile        | 手机号校验 |
+|@EnumString    | 枚举字符串校验，被校验字段值须包含在在value数组中 |
 
 #### 枚举值
 

@@ -10,9 +10,8 @@ Gitee地址：https://gitee.com/opensabre/opensabre-framework
 
 | module名称                    | 子目录                           | 主要功能及用途                                                 |
 | -----------------------------| ------------------------------- | ------------------------------------------------------------ |
-| opensabre-base-release       | opensabre-base-release          |  opensabre服务框架父工程，定义通用配置，如打包、仓库、发布等各模块配置  |
+| opensabre-framework          | opensabre-framework             |  opensabre服务框架父工程，定义通用配置，如打包、仓库、发布等各模块配置  |
 | opensabre-base-dependencies  | opensabre-base-dependencies     |  opensabre服务框架工程的依赖管理，如版本、配置等定义  |
-| opensabre-base-starter       | opensabre-base-starter          |  |
 | opensabre-starter-register   | opensabre-starter-register      |  注册中心相关starter模块，用于封装简化注册中心使用，约定使用规范等|
 | opensabre-starter-config     | opensabre-starter-config        |  配置中心相关starter模块，用于封装简化配置中心使用，约定使用规范等|
 | opensabre-starter-boot       | opensabre-starter-boot          |  springboot web相关starter模块，用于封装统一异常处理、统一报文、swagger文档等相关规范约定等|
