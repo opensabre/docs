@@ -16,7 +16,7 @@
 
 ### 1. 引入starter包
 
-gradle依赖引入`implementation 'io.github.opensabre:opensabre-starter-boot:0.0.5'`
+gradle依赖引入`implementation 'io.github.opensabre:opensabre-starter-boot:0.0.6'`
 
 ```gradle
 plugins {
@@ -34,7 +34,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.github.opensabre:opensabre-starter-boot:0.0.5'
+    implementation 'io.github.opensabre:opensabre-starter-boot:0.0.6'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
@@ -50,7 +50,7 @@ maven引入
 <dependency>
 	<groupId>io.github.opensabre</groupId>
 	<artifactId>opensabre-starter-boot</artifactId>
-	<version>0.0.5</version>
+	<version>0.0.6</version>
 </dependency>
 ```
 
