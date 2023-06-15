@@ -20,17 +20,17 @@ opensabre-framework默认包含了数据校验的模块并对其进行主扩展�
 | 依赖软件                    | 要求     | 备注                                             |
 | ------------------------- | -------- | -----------------------------------------------------------|
 | java                      | 11+      | 必须                                             |
-| opensabre-starter-boot    | 0.0.5    | opensabre-starter-boot默认引入spring-boot-starter-validation |
+| opensabre-starter-boot    | 0.0.6    | opensabre-starter-boot默认引入spring-boot-starter-validation |
 
 ## 开发
 
 ### 引入starter包
 
-gradle依赖引入`implementation 'io.github.opensabre:opensabre-starter-boot:0.0.5'`
+gradle依赖引入`implementation 'io.github.opensabre:opensabre-starter-boot:0.0.6'`
 
 ```groovy
 dependencies {
-    implementation 'io.github.opensabre:opensabre-starter-boot:0.0.5'
+    implementation 'io.github.opensabre:opensabre-starter-boot:0.0.6'
 }
 ```
 
@@ -41,7 +41,7 @@ maven引入
 <dependency>
     <groupId>io.github.opensabre</groupId>
     <artifactId>opensabre-starter-boot</artifactId>
-    <version>0.0.5</version>
+    <version>0.0.6</version>
 </dependency>
 ```
 
@@ -165,7 +165,7 @@ curl -X 'POST' \
 {
   "code": "020000",
   "mesg": "请求参数校验不通过",
-  "time": "2023-02-26 17:37:40.964",
+  "time": "2023-02-26T17:37:40.964Z",
   "data": "密码为3~20字母数字"
 }
 ```
@@ -215,9 +215,9 @@ curl -X 'POST' \
 
 ```json
 {
-    "code":"000000",
-    "mesg":"处理成功",
-    "time":"2022-11-22 14:46:58.826",
+    "code":"020000",
+    "mesg":"请求参数校验不通过",
+    "time":"2022-11-22T14:46:58.826Z",
     "data": "类型只能为Last、Second、First"
 }
 ```

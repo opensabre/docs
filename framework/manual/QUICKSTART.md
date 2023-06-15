@@ -99,7 +99,7 @@ root@xxxxx # curl http://localhost:8080/test/echo?name=zhangsan
 {   
     "code":"000000",
     "mesg":"处理成功",
-    "time":"2022-11-22T14:46:58.826435Z",
+    "time":"2022-11-22T14:46:58.643Z",
     "data":"Hello:zhangsan"
 }
 ```

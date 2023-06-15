@@ -15,18 +15,18 @@ opensabre-framework默认集成了caffeine，分别提供基于jvm和redis的多
 | ------------------------- | -------- | ------------------------------------------------|
 | java                      | 11+      | 必须                                             |
 | redis                     | 6.0+     | 必须                                             |
-| opensabre-starter-boot    | 0.0.5    | web项目用于测试                                   |
-| opensabre-starter-cache   | 0.0.5    | 必须                                             |
+| opensabre-starter-boot    | 0.0.6    | web项目用于测试                                   |
+| opensabre-starter-cache   | 0.0.6    | 必须                                             |
 
 ## 开发
 
 ### 引入starter包
 
-gradle依赖引入`implementation 'io.github.opensabre:opensabre-starter-cache:0.0.5'`
+gradle依赖引入`implementation 'io.github.opensabre:opensabre-starter-cache:0.0.6'`
 
 ```groovy
 dependencies {
-    implementation 'io.github.opensabre:opensabre-starter-cache:0.0.5'
+    implementation 'io.github.opensabre:opensabre-starter-cache:0.0.6'
 }
 ```
 
@@ -37,7 +37,7 @@ maven引入
 <dependency>
     <groupId>io.github.opensabre</groupId>
     <artifactId>opensabre-starter-cache</artifactId>
-    <version>0.0.5</version>
+    <version>0.0.6</version>
 </dependency>
 ```
 
@@ -182,7 +182,7 @@ root@xxxxx # curl http://localhost:8080/cache/user?userId=zhangsan
 {   
     "code":"000000",
     "mesg":"处理成功",
-    "time":"2023-03-22T14:46:58.826435Z",
+    "time":"2023-03-22T14:46:58.825Z",
     "data":"zhangsan:zhangsan:G0aci"
 }
 ```

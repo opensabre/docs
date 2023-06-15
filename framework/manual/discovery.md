@@ -21,7 +21,7 @@
 
 ```shell
 root@xxxxx # curl http://localhost:8080/test/echo?name=zhangsan
-{"code":"000000","mesg":"处理成功","time":"2022-11-22T14:46:58.826435Z","data":"Hello:zhangsan"}
+{"code":"000000","mesg":"处理成功","time":"2022-11-22T14:46:58.835Z","data":"Hello:zhangsan"}
 ```
 
 ## 文档
