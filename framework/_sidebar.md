@@ -12,6 +12,8 @@
     * [统一异常处理](framework/manual/base/exception.md)
     * [统一REST报文](framework/manual/base/response.md)
     * [统一响应码](framework/manual/base/returncode.md)
+    * [配置项加密](framework/manual/base/encryptConfig.md)
+    * [敏感信息脱敏](framework/manual/base/sensitive.md)
     * [API文档](framework/manual/base/doc.md)
   * [注册中心](framework/manual/discovery.md)
   * [配置中心](framework/manual/config.md)
