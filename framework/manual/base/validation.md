@@ -26,24 +26,30 @@ opensabre-framework默认包含了数据校验的模块并对其进行主扩展�
 
 ### 引入starter包
 
-gradle依赖引入`implementation 'io.github.opensabre:opensabre-starter-boot:0.0.6'`
+引入依赖 `opensabre-starter-boot` 
 
-```groovy
-dependencies {
-    implementation 'io.github.opensabre:opensabre-starter-boot:0.0.6'
-}
-```
+<!-- tabs:start -->
 
-maven引入
+#### **maven**
 
 ```xml
 <!-- opensabre boot starter -->
 <dependency>
     <groupId>io.github.opensabre</groupId>
     <artifactId>opensabre-starter-boot</artifactId>
-    <version>0.0.6</version>
+    <version>0.0.7</version>
 </dependency>
 ```
+
+#### **gradle**
+
+```groovy
+dependencies {
+    implementation 'io.github.opensabre:opensabre-starter-boot:0.0.7'
+}
+```
+
+<!-- tabs:end -->
 
 ### 基础校验规则
 

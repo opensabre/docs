@@ -22,24 +22,30 @@ opensabre-framework默认集成了caffeine，分别提供基于jvm和redis的多
 
 ### 引入starter包
 
-gradle依赖引入`implementation 'io.github.opensabre:opensabre-starter-cache:0.0.6'`
+引入依赖 `opensabre-starter-cache` 
 
-```groovy
-dependencies {
-    implementation 'io.github.opensabre:opensabre-starter-cache:0.0.6'
-}
-```
+<!-- tabs:start -->
 
-maven引入
+#### **maven**
 
 ```xml
-<!-- opensabre cache starter -->
+<!-- opensabre boot starter -->
 <dependency>
     <groupId>io.github.opensabre</groupId>
     <artifactId>opensabre-starter-cache</artifactId>
-    <version>0.0.6</version>
+    <version>0.0.7</version>
 </dependency>
 ```
+
+#### **gradle**
+
+```groovy
+dependencies {
+    implementation 'io.github.opensabre:opensabre-starter-cache:0.0.7'
+}
+```
+
+<!-- tabs:end -->
 
 ### 缓存使用
 

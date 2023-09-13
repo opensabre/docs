@@ -24,15 +24,11 @@
 
 ### 引入starter包
 
-gradle依赖引入`implementation 'io.github.opensabre:opensabre-starter-boot:0.0.7'`
+引入依赖 `opensabre-starter-boot` 
 
-```groovy
-dependencies {
-    implementation 'io.github.opensabre:opensabre-starter-boot:0.0.7'
-}
-```
+<!-- tabs:start -->
 
-maven引入
+#### **maven**
 
 ```xml
 <!-- opensabre boot starter -->
@@ -42,6 +38,16 @@ maven引入
     <version>0.0.7</version>
 </dependency>
 ```
+
+#### **gradle**
+
+```groovy
+dependencies {
+    implementation 'io.github.opensabre:opensabre-starter-boot:0.0.7'
+}
+```
+
+<!-- tabs:end -->
 
 ### 使用教程
 

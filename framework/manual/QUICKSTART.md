@@ -16,12 +16,26 @@
 
 ### 1. 引入starter包
 
-gradle依赖引入`implementation 'io.github.opensabre:opensabre-starter-boot:0.0.6'`
+引入依赖 `opensabre-starter-boot` 
 
-```gradle
+<!-- tabs:start -->
+
+#### **maven**
+
+```xml
+<!-- opensabre boot starter -->
+<dependency>
+    <groupId>io.github.opensabre</groupId>
+    <artifactId>opensabre-starter-boot</artifactId>
+    <version>0.0.7</version>
+</dependency>
+```
+
+#### **gradle**
+
+```groovy
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '2.7.5'
     id 'io.spring.dependency-management' version '1.0.15.RELEASE'
 }
 
@@ -43,16 +57,7 @@ tasks.named('test') {
 }
 ```
 
-maven引入
-
-```xml
-<!-- opensabre starter -->
-<dependency>
-	<groupId>io.github.opensabre</groupId>
-	<artifactId>opensabre-starter-boot</artifactId>
-	<version>0.0.6</version>
-</dependency>
-```
+<!-- tabs:end -->
 
 ### 2. 增加配置项
 

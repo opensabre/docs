@@ -19,24 +19,30 @@ opensabre-framework默认内置了部分常见异常处理，返回对应的响�
 
 ### 引入starter包
 
-gradle依赖引入`implementation 'io.github.opensabre:opensabre-starter-boot:0.0.5'`
+引入依赖 `opensabre-starter-boot` 
 
-```groovy
-dependencies {
-    implementation 'io.github.opensabre:opensabre-starter-boot:0.0.5'
-}
-```
+<!-- tabs:start -->
 
-maven引入
+#### **maven**
 
 ```xml
 <!-- opensabre boot starter -->
 <dependency>
     <groupId>io.github.opensabre</groupId>
     <artifactId>opensabre-starter-boot</artifactId>
-    <version>0.0.5</version>
+    <version>0.0.7</version>
 </dependency>
 ```
+
+#### **gradle**
+
+```groovy
+dependencies {
+    implementation 'io.github.opensabre:opensabre-starter-boot:0.0.7'
+}
+```
+
+<!-- tabs:end -->
 
 ### 内置异常及响应码
 

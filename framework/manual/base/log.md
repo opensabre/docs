@@ -27,15 +27,11 @@
 
 ### 引入starter包
 
-gradle依赖引入`implementation 'io.github.opensabre:opensabre-starter-boot:0.0.7'`
+引入依赖 `opensabre-starter-boot` 
 
-```groovy
-dependencies {
-    implementation 'io.github.opensabre:opensabre-starter-boot:0.0.7'
-}
-```
+<!-- tabs:start -->
 
-maven引入
+#### **maven**
 
 ```xml
 <!-- opensabre boot starter -->
@@ -45,6 +41,16 @@ maven引入
     <version>0.0.7</version>
 </dependency>
 ```
+
+#### **gradle**
+
+```groovy
+dependencies {
+    implementation 'io.github.opensabre:opensabre-starter-boot:0.0.7'
+}
+```
+
+<!-- tabs:end -->
 
 ### 配置项
 
@@ -68,7 +74,7 @@ opensabre:
 
 支持 `[password|pass|passwd|secret|key|credential|token][[is|:|：|=|<|>]123456`形式的密码信息脱敏。
 
-> [!note|label:信息]
+> [!tip|label:提示]
 > </br>
 > 打开`opensabre.sensitive.log.enabled`开关后， `PasswordLogBackDesensitizer`密码脱敏器默认会加载，防止密码信息打印控制台。
 
