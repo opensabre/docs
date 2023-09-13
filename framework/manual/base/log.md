@@ -46,6 +46,45 @@ maven引入
 </dependency>
 ```
 
+### 配置项
+
+#### 正则匹配
+
+输出的信息有固定模式可识别，如固定电话、身份证号、手机号、email、地址、车牌、银行卡号等，框架已提供相应的正则，可通过简单配置识别日志中的信息，并进行脱敏屏蔽。
+
+```yaml
+# opensabre framework配置
+opensabre:
+  sensitive:
+    log:
+      enabled: true # 日志脱敏开关，默认为关闭
+      rules: mobile,idCard,phone,address  # 默认配置mobile,idCard,phone，可支持 mobile,idCard,phone,email,address,carLicense,bankCard选项
+
+```
+
+#### 固定格式匹配
+
+诸如密码、姓名类的信息无法简单通过正则匹配，但在日志输出时会在信息前给出提示信息，如 passwrod: XXXXXXX、姓名：张三 等样式，通过配置bean实例化脱敏器，便可进行信息脱敏。
+
+支持 `[password|pass|passwd|secret|key|credential|token][[is|:|：|=|<|>]123456`形式的密码信息脱敏。
+
+> [!note|label:信息]
+> </br>
+> 打开`opensabre.sensitive.log.enabled`开关后， `PasswordLogBackDesensitizer`密码脱敏器默认会加载，防止密码信息打印控制台。
+
+姓名脱敏器，可通过实例化`NameLogBackDesensitizer`类进行配置，支持 `[name|姓名|][is|:|：|=|<|>]张三李四` 形式的信息脱敏。
+
+```java
+@Configuration
+public class SensitiveConfig {
+
+    @Bean
+    LogBackDesensitizer nameLogBackDesensitizer() {
+        return new NameLogBackDesensitizer();
+    }
+}
+```
+
 ### 输出日志
 
 ```java
@@ -72,6 +111,8 @@ public class SensitiveController {
         log.info("userVo:{}", new ObjectMapper().writeValueAsString(userVo));
         log.info("userVo email:{}, mobile={} ,phone={}", userVo.getEmail(), userVo.getMobile(), userVo.getPhone());
         log.info("userVo password:{} , userVo passwd:{} key is {}", userVo.getPassword(), "1qaz@WSX", "key123");
+        log.info("name is 张四一，姓名：李四六，住址：{}", "中国台湾省台北市新竹县桃源村5号天下花园1幢103室");
+
         return userVo;
     }
 }
@@ -99,18 +140,6 @@ curl -X 'GET' 'http://localhost:8080/sensitive/user'
 "password":"********","orderId":"A7******6636"}
 2023-09-09 12:57:10.335  INFO [,c5cacaa69bc09055,c5cacaa69bc09055] 72106 --- [  XNIO-1 task-1] c.o.sample.rest.SensitiveController      : userVo email:abc123@123.com, mobile=137****0098 ,phone=057*******67
 2023-09-09 12:57:10.341  INFO [,c5cacaa69bc09055,c5cacaa69bc09055] 72106 --- [  XNIO-1 task-1] c.o.sample.rest.SensitiveController      : userVo password:******** , userVo passwd:******** key is ******
-```
-
-### 配置项
-
-```yaml
-# opensabre framework配置
-opensabre:
-  sensitive:
-    log:
-      enabled: true # 日志脱敏开关，默认为关闭
-      rules: mobile,idCard,phone  # 默认配置mobile,idCard,phone，可支持 mobile,idCard,phone,email,address,carLicense,bankCard选项
-
 ```
 
 ## 文档
