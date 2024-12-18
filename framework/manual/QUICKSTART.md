@@ -10,7 +10,7 @@
 
 | 依赖软件        | 要求     | 备注                                                  |
 | ------------- | -------- | ---------------------------------------------------- |
-| java          | 11+      | 必须                                                  |
+| java          | 17+      | 必须                                                  |
 
 ## 开发
 
@@ -27,7 +27,7 @@
 <dependency>
     <groupId>io.github.opensabre</groupId>
     <artifactId>opensabre-starter-boot</artifactId>
-    <version>0.0.7</version>
+    <version>0.1.0</version>
 </dependency>
 ```
 
@@ -41,14 +41,14 @@ plugins {
 
 group = 'io.github.opensabre'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = '17'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation 'io.github.opensabre:opensabre-starter-boot:0.0.6'
+    implementation 'io.github.opensabre:opensabre-starter-boot:0.1.0'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 

@@ -17,8 +17,8 @@
 
 | 依赖软件                    | 要求     | 备注                                             |
 | ------------------------- | -------- | ------------------------------------------------|
-| java                      | 11+      | 必须                                             |
-| opensabre-starter-boot    | 0.0.7    |                                                 |
+| java                      | 17+      | 必须                                             |
+| opensabre-starter-boot    | 0.1.0    |                                                 |
 
 ## 开发
 
@@ -35,7 +35,7 @@
 <dependency>
     <groupId>io.github.opensabre</groupId>
     <artifactId>opensabre-starter-boot</artifactId>
-    <version>0.0.7</version>
+    <version>0.1.0</version>
 </dependency>
 ```
 
@@ -43,7 +43,7 @@
 
 ```groovy
 dependencies {
-    implementation 'io.github.opensabre:opensabre-starter-boot:0.0.7'
+    implementation 'io.github.opensabre:opensabre-starter-boot:0.1.0'
 }
 ```
 
@@ -107,7 +107,7 @@ curl -X 'GET' 'http://localhost:8080/config/get'
 {
   "code": "000000",
   "mesg": "请求成功",
-  "time": "2023-02-26 17:37:40.964",
+  "time": "2023-02-26T17:37:40.964Z",
   "data": "123456"
 }
 ```
@@ -198,4 +198,4 @@ mvn jasypt:decrypt-value -Djasypt.encryptor.password="秘钥的值" -Djasypt.plu
 
 ## 文档
 
-swagger文档地址：`http://localhost:8080/swagger-ui/index.html#/config/get`
+swagger文档地址：`http://localhost:8080/doc.html#/config/get`

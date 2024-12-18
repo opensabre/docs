@@ -20,8 +20,8 @@
 
 | 依赖软件                    | 要求     | 备注                                             |
 | ------------------------- | -------- | ------------------------------------------------|
-| java                      | 11+      | 必须                                             |
-| opensabre-starter-boot    | 0.0.7    |                                                 |
+| java                      | 17+      | 必须                                             |
+| opensabre-starter-boot    | 0.1.0    |                                                 |
 
 ## 开发
 
@@ -38,7 +38,7 @@
 <dependency>
     <groupId>io.github.opensabre</groupId>
     <artifactId>opensabre-starter-boot</artifactId>
-    <version>0.0.7</version>
+    <version>0.1.0</version>
 </dependency>
 ```
 
@@ -46,7 +46,7 @@
 
 ```groovy
 dependencies {
-    implementation 'io.github.opensabre:opensabre-starter-boot:0.0.7'
+    implementation 'io.github.opensabre:opensabre-starter-boot:0.1.0'
 }
 ```
 
@@ -118,7 +118,6 @@ public class SensitiveController {
         log.info("userVo email:{}, mobile={} ,phone={}", userVo.getEmail(), userVo.getMobile(), userVo.getPhone());
         log.info("userVo password:{} , userVo passwd:{} key is {}", userVo.getPassword(), "1qaz@WSX", "key123");
         log.info("name is 张四一，姓名：李四六，住址：{}", "中国台湾省台北市新竹县桃源村5号天下花园1幢103室");
-
         return userVo;
     }
 }
@@ -135,7 +134,7 @@ curl -X 'GET' 'http://localhost:8080/sensitive/user'
 
  1. 日志中匹配手机号、固定电话、身份证号格式的信息均按默认规则进行报脱敏处理。
  
- 2. 日志中匹配 [password|pass|passwd|secret|key|credential|token][：=<>:]字符串的均被认为是凭证，进行了掩码处理。
+ 2. 日志中匹配 `[password|pass|passwd|secret|key|credential|token][：=<>:]` 字符串的均被认为是凭证，进行了掩码处理。
 
 具体脱敏的规则可查看 [脱敏规则](/framework/manual/base/sensitive?id=内置脱敏策略)
 
@@ -146,6 +145,7 @@ curl -X 'GET' 'http://localhost:8080/sensitive/user'
 "password":"********","orderId":"A7******6636"}
 2023-09-09 12:57:10.335  INFO [,c5cacaa69bc09055,c5cacaa69bc09055] 72106 --- [  XNIO-1 task-1] c.o.sample.rest.SensitiveController      : userVo email:abc123@123.com, mobile=137****0098 ,phone=057*******67
 2023-09-09 12:57:10.341  INFO [,c5cacaa69bc09055,c5cacaa69bc09055] 72106 --- [  XNIO-1 task-1] c.o.sample.rest.SensitiveController      : userVo password:******** , userVo passwd:******** key is ******
+2023-09-13 00:09:53.387  INFO [,1dac9417bc287cc1,1dac9417bc287cc1] 90603 --- [  XNIO-1 task-1] c.o.sample.rest.SensitiveController      : name is 张**，姓名：李**，住址：中国台湾省台北市新竹县桃源村5号天下花园1幢103室
 ```
 
 ## 文档
