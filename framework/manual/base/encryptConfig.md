@@ -18,7 +18,7 @@
 | 依赖软件                    | 要求     | 备注                                             |
 | ------------------------- | -------- | ------------------------------------------------|
 | java                      | 17+      | 必须                                             |
-| opensabre-starter-boot    | 0.1.0    |                                                 |
+| opensabre-starter-boot    | 0.1.1    |                                                 |
 
 ## 开发
 
@@ -35,7 +35,7 @@
 <dependency>
     <groupId>io.github.opensabre</groupId>
     <artifactId>opensabre-starter-boot</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
 </dependency>
 ```
 
@@ -100,7 +100,6 @@ public class EncryptConfigController {
 curl -X 'GET' 'http://localhost:8080/config/get'
 
 ```
-
 响应
 
 ```json

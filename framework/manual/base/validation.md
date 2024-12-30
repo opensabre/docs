@@ -2,9 +2,14 @@
 
 ## 简介
 
-⽇常项⽬开发中，对于前端提交的表单，后台接⼝接收到表单数据后，通常会加⼊业务参数的合法校验操作来增加安全性。
+在微服务开发中,对前端提交的表单数据进行合法性校验是必要的安全措施。opensabre-starter-boot 默认集成了 spring-validation,并扩展了一些常用的校验注解。
 
-springboot中使用spring-boot-starter-validation进行了数据校验的⼯作。
+## 特性
+- 支持标准的 JSR-303 校验注解
+- 扩展了常用的业务校验注解(如手机号、身份证等)
+- 统一的校验异常处理
+- 支持分组校验
+- 支持自定义校验注解
 
 opensabre-framework默认包含了数据校验的模块并对其进行主扩展，基础的校验与springboot使用方法一样。
 
@@ -37,7 +42,7 @@ opensabre-framework默认包含了数据校验的模块并对其进行主扩展�
 <dependency>
     <groupId>io.github.opensabre</groupId>
     <artifactId>opensabre-starter-boot</artifactId>
-    <version>0.1.0</version>
+    <version>0.1.1</version>
 </dependency>
 ```
 
@@ -227,7 +232,6 @@ curl -X 'POST' \
     "data": "类型只能为Last、Second、First"
 }
 ```
-
 ## 文档
 
 swagger文档地址：`http://localhost:8080/doc.html#/valid/formAdd`

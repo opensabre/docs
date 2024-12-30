@@ -14,7 +14,7 @@
 |---------|-------------|-----------------------|
 | code    |  交易代码    |000000为交易成功，详细见[统一返回码](framework/manual/base/returncode.md)章节|
 | mesg    |  交易返回信息 |一般为交易失败时的中文解释   |
-| time    |  交易返回时间 | yyyy-MM-dd HH:mm:ss.SSS|
+| time    |  交易返回时间 | yyyy-MM-ddTHH:mm:ss.SSSZ|
 | data    |  交易返回数据 |内容可为字符串、数组、对象   |
 
 ### 报文样例

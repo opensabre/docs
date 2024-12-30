@@ -36,7 +36,8 @@
 ```groovy
 plugins {
     id 'java'
-    id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+    id 'org.springframework.boot' version '3.4.1'
+    id 'io.spring.dependency-management' version '1.1.7'
 }
 
 group = 'io.github.opensabre'
@@ -112,3 +113,5 @@ root@xxxxx # curl http://localhost:8080/test/echo?name=zhangsan
 ## 文档
 
 swagger文档地址：`http://localhost:8080/swagger-ui/index.html`
+
+knife4j文档地址：`http://localhost:8080/doc.html`
