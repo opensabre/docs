@@ -25,7 +25,7 @@ opensabre-framework默认包含了数据校验的模块并对其进行主扩展�
 | 依赖软件                    | 要求     | 备注                                             |
 | ------------------------- | -------- | -----------------------------------------------------------|
 | java                      | 17+      | 必须                                             |
-| opensabre-starter-boot    | 0.1.0    | opensabre-starter-boot默认引入spring-boot-starter-validation |
+| opensabre-starter-boot    | 0.3.0    | opensabre-starter-boot默认引入spring-boot-starter-validation |
 
 ## 开发
 
@@ -50,7 +50,7 @@ opensabre-framework默认包含了数据校验的模块并对其进行主扩展�
 
 ```groovy
 dependencies {
-    implementation 'io.github.opensabre:opensabre-starter-boot:0.1.0'
+    implementation 'io.github.opensabre:opensabre-starter-boot:0.3.0'
 }
 ```
 

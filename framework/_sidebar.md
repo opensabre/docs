@@ -14,6 +14,7 @@
     * [统一响应码](framework/manual/base/returncode.md)
     * [配置项加密](framework/manual/base/encryptConfig.md)
     * [敏感信息脱敏](framework/manual/base/sensitive.md)
+    * [审计日志](framework/manual/base/audit.md)
     * [API文档](framework/manual/base/doc.md)
   * [注册中心](framework/manual/discovery.md)
   * [配置中心](framework/manual/config.md)
@@ -27,6 +28,7 @@
 
 * [**系统架构**](framework/architecture/README.md)
   * [组件简介](framework/architecture/COMPONENT.md)
+  * [框架模块设计](framework/architecture/MODULES.md)
   * [应用架构](framework/architecture/APPLICATION.md)
 
 * [**开发指南**](framework/develop/README.md)

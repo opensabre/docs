@@ -2,7 +2,7 @@
 
 ## 简介
 
-本例快速使用opensabre-starter-boot构建一个springboot新应用，默认集成统一异常、统一报文、文档等基础组件和规范。
+本例快速使用 `opensabre-starter-boot` 和 `opensabre-starter-webmvc` 构建一个 Spring Boot WebMVC 新应用，默认集成统一异常、统一报文、文档等基础组件和规范。
 
 项目地址：`https://github.com/opensabre/examples/sample-boot`
 
@@ -14,20 +14,24 @@
 
 ## 开发
 
-### 1. 引入starter包
+### 1. 引入 starter 包
 
-引入依赖 `opensabre-starter-boot` 
+WebMVC 项目需要引入 `opensabre-starter-boot` 和 `opensabre-starter-webmvc`。`opensabre-starter-webmvc` 已包含 `spring-boot-starter-web`，默认使用 Undertow 容器。
 
 <!-- tabs:start -->
 
 #### **maven**
 
 ```xml
-<!-- opensabre boot starter -->
 <dependency>
     <groupId>io.github.opensabre</groupId>
     <artifactId>opensabre-starter-boot</artifactId>
-    <version>0.1.0</version>
+    <version>0.3.0</version>
+</dependency>
+<dependency>
+    <groupId>io.github.opensabre</groupId>
+    <artifactId>opensabre-starter-webmvc</artifactId>
+    <version>0.3.0</version>
 </dependency>
 ```
 
@@ -49,7 +53,8 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.github.opensabre:opensabre-starter-boot:0.1.0'
+    implementation 'io.github.opensabre:opensabre-starter-boot:0.3.0'
+    implementation 'io.github.opensabre:opensabre-starter-webmvc:0.3.0'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 

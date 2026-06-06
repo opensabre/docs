@@ -43,7 +43,7 @@
 
 ```groovy
 dependencies {
-    implementation 'io.github.opensabre:opensabre-starter-boot:0.1.0'
+    implementation 'io.github.opensabre:opensabre-starter-boot:0.3.0'
 }
 ```
 
