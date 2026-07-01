@@ -1,5 +1,35 @@
 # 更新日志
 
+## **2026-07-01**
+
+### 0.4.0
+
+1. 新增 `opensabre-starter-governance`，统一承载治理类 SDK 能力。
+
+2. 审计日志从 `opensabre-starter-boot` 拆分到 governance starter，业务应用引入 starter 后通过 `@Audit` + AOP 自动记录审计日志，并统一调用 sysadmin 入库。
+
+3. 新增限次 SDK 能力，提供 `@RateLimit` + AOP + 自动装配，由 starter 调用 sysadmin 的限次检查接口统一管理规则和计数。
+
+4. governance starter 新增 `opensabre.governance.*` 配置项，支持配置 sysadmin 服务名和治理功能开关。
+
+5. `opensabre-base-dependencies` 增加 governance starter 版本管理，业务应用可直接按 starter 方式引入。
+
+6. `opensabre-starter-boot` 移除审计相关代码，职责收敛到启动、日志、脱敏等基础能力。
+
+### 0.3.0
+
+1. 新增 `opensabre-starter-webflux`，补齐响应式 Web 应用的 starter 支持。
+
+2. 重构 Web 模块边界，拆分并整理 `opensabre-web`、`opensabre-starter-webmvc`、`opensabre-starter-webflux` 的依赖职责。
+
+3. 调整 WebMVC starter 依赖定位，补齐运行所需的 Servlet、Validation、Lombok 等依赖声明。
+
+4. 聚合 WebFlux starter 运行时依赖，降低业务应用手工补依赖成本。
+
+5. 修复 boot 模块编译缺少 Servlet API 的问题。
+
+6. 升级 Lombok 版本以适配更新的 JDK 编译环境。
+
 ## **2024-08-06**
 
 1. JDK升级至17+，服务框架springboot升级到3.2.3，springcloud版本升级到2023.0.0
