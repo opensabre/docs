@@ -22,6 +22,7 @@
   * [灰度发布](framework/manual/grey.md)
   * [多级缓存](framework/manual/cache.md)
   * [事件中心](framework/manual/eda.md)
+  * [治理SDK](framework/manual/governance.md)
   * [远程调用](framework/manual/rpc.md)
   * [服务治理](framework/manual/clean.md)
   * [数据持久化](framework/manual/persistence.md)

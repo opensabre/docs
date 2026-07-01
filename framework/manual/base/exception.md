@@ -13,7 +13,7 @@ opensabre-framework默认内置了部分常见异常处理，返回对应的响�
 | 依赖软件                    | 要求     | 备注                                             |
 | ------------------------- | -------- | ------------------------------------------------|
 | java                      | 17+      | 必须                                             |
-| opensabre-starter-boot    | 0.3.0    |                                                 |
+| opensabre-starter-boot    | 0.4.0    |                                                 |
 
 ## 开发
 
@@ -30,7 +30,7 @@ opensabre-framework默认内置了部分常见异常处理，返回对应的响�
 <dependency>
     <groupId>io.github.opensabre</groupId>
     <artifactId>opensabre-starter-boot</artifactId>
-    <version>0.3.0</version>
+    <version>0.4.0</version>
 </dependency>
 ```
 
@@ -38,7 +38,7 @@ opensabre-framework默认内置了部分常见异常处理，返回对应的响�
 
 ```groovy
 dependencies {
-    implementation 'io.github.opensabre:opensabre-starter-boot:0.3.0'
+    implementation 'io.github.opensabre:opensabre-starter-boot:0.4.0'
 }
 ```
 

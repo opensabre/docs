@@ -26,12 +26,12 @@ WebMVC 项目需要引入 `opensabre-starter-boot` 和 `opensabre-starter-webmvc
 <dependency>
     <groupId>io.github.opensabre</groupId>
     <artifactId>opensabre-starter-boot</artifactId>
-    <version>0.3.0</version>
+    <version>0.4.0</version>
 </dependency>
 <dependency>
     <groupId>io.github.opensabre</groupId>
     <artifactId>opensabre-starter-webmvc</artifactId>
-    <version>0.3.0</version>
+    <version>0.4.0</version>
 </dependency>
 ```
 
@@ -53,8 +53,8 @@ repositories {
 }
 
 dependencies {
-    implementation 'io.github.opensabre:opensabre-starter-boot:0.3.0'
-    implementation 'io.github.opensabre:opensabre-starter-webmvc:0.3.0'
+    implementation 'io.github.opensabre:opensabre-starter-boot:0.4.0'
+    implementation 'io.github.opensabre:opensabre-starter-webmvc:0.4.0'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
@@ -120,3 +120,13 @@ root@xxxxx # curl http://localhost:8080/test/echo?name=zhangsan
 swagger文档地址：`http://localhost:8080/swagger-ui/index.html`
 
 knife4j文档地址：`http://localhost:8080/doc.html`
+
+## 可选治理能力
+
+如果业务应用需要审计日志或限次能力，引入 governance starter：
+
+```groovy
+implementation 'io.github.opensabre:opensabre-starter-governance:0.4.0'
+```
+
+然后在业务方法上使用 `@Audit` 或 `@RateLimit`，starter 会通过 sysadmin 的接口统一处理审计入库和限次检查。

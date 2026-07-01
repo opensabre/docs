@@ -2,13 +2,25 @@
 
 ## 简介
 
-`opensabre-starter-boot` 提供方法级审计日志能力。业务方法添加 `@Audit` 后，框架会在方法执行结束后发布 `AuditEvent`，默认监听器会记录事件日志。业务系统如需写入数据库、消息队列或审计平台，可以自定义 `ApplicationListener<AuditEvent>`。
+`opensabre-starter-governance` 提供方法级审计日志能力。业务方法添加 `@Audit` 后，starter 会通过 AOP 采集审计信息，并调用 sysadmin 的审计接口统一入库管理。
+
+## 引入依赖
+
+```xml
+<dependency>
+    <groupId>io.github.opensabre</groupId>
+    <artifactId>opensabre-starter-governance</artifactId>
+    <version>0.4.0</version>
+</dependency>
+```
 
 ## 启用审计
 
-在启动类上添加 `@EnabledAudit`：
+默认自动装配会启用审计能力。如需显式启用，也可以在启动类上添加 `@EnabledAudit`：
 
 ```java
+import io.github.opensabre.governance.audit.annotations.EnabledAudit;
+
 @EnabledAudit
 @SpringBootApplication
 public class SampleApplication {
@@ -21,6 +33,9 @@ public class SampleApplication {
 ## 标记审计方法
 
 ```java
+import io.github.opensabre.governance.audit.annotations.Audit;
+import io.github.opensabre.governance.audit.annotations.OperationType;
+
 @Audit(
     operationType = OperationType.CREATE,
     description = "新增用户",
@@ -53,9 +68,29 @@ public boolean add(@RequestBody UserForm userForm) {
 CREATE, UPDATE, DELETE, QUERY, LOGIN, LOGOUT, SCAN, EXPORT, IMPORT, DOWNLOAD, UPLOAD
 ```
 
+## 统一入库
+
+starter 默认会把审计事件交给 sysadmin：
+
+```yaml
+opensabre:
+  governance:
+    sysadmin:
+      service-id: base-sysadmin
+    audit:
+      enabled: true
+```
+
+sysadmin 负责审计日志的统一入库、查询和后续管理。
+
 ## 自定义事件处理
 
 ```java
+import io.github.opensabre.governance.audit.entity.AuditInfo;
+import io.github.opensabre.governance.audit.event.AuditEvent;
+import org.springframework.context.ApplicationListener;
+import org.springframework.stereotype.Component;
+
 @Component
 public class AuditEventHandler implements ApplicationListener<AuditEvent> {
 
@@ -73,4 +108,3 @@ public class AuditEventHandler implements ApplicationListener<AuditEvent> {
 - 查询类接口默认不建议全部记录，避免审计数据过大。
 - `response = true` 只用于必要接口，避免记录过大的响应内容。
 - 敏感字段需要结合脱敏规则处理后再落库。
-
