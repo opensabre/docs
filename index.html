@@ -96,6 +96,34 @@
             border-color: var(--os-border);
         }
 
+        #docsify-darklight-theme {
+            position: fixed !important;
+            top: 12px !important;
+            right: 16px !important;
+            z-index: 9999 !important;
+            width: 38px !important;
+            height: 38px !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            border: 1px solid var(--os-border) !important;
+            border-radius: 999px !important;
+            background-color: var(--toogleBackground, var(--os-surface)) !important;
+            background-image: var(--toogleImage) !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            background-size: 19px 19px !important;
+            box-shadow: 0 10px 28px rgba(18, 32, 51, .18) !important;
+            cursor: pointer !important;
+        }
+
+        #docsify-darklight-theme p {
+            display: none !important;
+        }
+
+        .app-nav {
+            padding-right: 70px;
+        }
+
         .markdown-section > :first-child.os-home-hero-v2 {
             margin-top: -28px;
         }
@@ -657,9 +685,49 @@
                     highlightColor: '#e96900',
                     codeBackgroundColor: 'rgb(34,39,46)',
                     codeTextColor: '#b4b4b4',
+                    textColor: '#edf5fb',
+                    borderColor: '#304154',
+                    toogleBackground: '#172231',
+                    'theme-color': '#5ee0bf',
+                    'os-page': '#111820',
+                    'os-surface': '#172231',
+                    'os-surface-soft': '#1d2a3a',
+                    'os-ink': '#edf5fb',
+                    'os-muted': '#b5c5d4',
+                    'os-border': '#304154',
+                    'os-soft': '#182433',
+                    'os-accent': '#5ee0bf',
+                    'os-accent-strong': '#8cf0d6',
+                    'os-blue': '#8ab4ff',
+                    'os-hero-text': '#f5fbff',
+                    'os-hero-muted': '#c6d6e5',
+                    'os-hero-panel': 'rgba(13, 25, 39, .96)',
+                    'os-hero-panel-border': 'rgba(126, 230, 198, .28)',
+                    'os-hero-chip': 'rgba(94, 224, 191, .14)',
+                    'os-hero-chip-text': '#a8f5df',
                 },
                 light: {
                     highlightColor: '#e96900',
+                    textColor: '#122033',
+                    borderColor: '#d9e5ee',
+                    toogleBackground: '#ffffff',
+                    'theme-color': '#0f8f74',
+                    'os-page': '#ffffff',
+                    'os-surface': '#ffffff',
+                    'os-surface-soft': '#f4f8fb',
+                    'os-ink': '#122033',
+                    'os-muted': '#5d6b7c',
+                    'os-border': '#d9e5ee',
+                    'os-soft': '#f4f8fb',
+                    'os-accent': '#0f8f74',
+                    'os-accent-strong': '#0b755f',
+                    'os-blue': '#2e6edb',
+                    'os-hero-text': '#102033',
+                    'os-hero-muted': '#516276',
+                    'os-hero-panel': 'rgba(10, 28, 48, .92)',
+                    'os-hero-panel-border': 'rgba(33, 148, 123, .28)',
+                    'os-hero-chip': 'rgba(15, 143, 116, .10)',
+                    'os-hero-chip-text': '#0b755f',
                 }
             },
             search: {
