@@ -1,7 +1,6 @@
 * [服务框架](framework/README.md)
 * [基础应用](baseapp/README.md)
-* [版本说明](framework/VERSONS.md)
-* [项目列表](PROJECT.md)
+* [项目列表](projects/README.md)
 	* [opensabre-framework](https://github.com/opensabre/opensabre-framework)
 	* [base-organization](https://github.com/opensabre/base-organization)
 	* [base-authorization](https://github.com/opensabre/base-authorization)
