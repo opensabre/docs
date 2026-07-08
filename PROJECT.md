@@ -14,7 +14,7 @@
 | opensabre-framework    | https://github.com/opensabre/opensabre-framework    | opensabre服务框架工程多moudle，框架包、starter包等，详见[服务框架](/framework/README) |
 | base-organization      | https://github.com/opensabre/base-organization      | 基础应用，如人员、组织、角色、权限等的管理应用。             |
 | base-authorization     | https://github.com/opensabre/base-authorization     | 授权应用，负责发放、核验、回收等Token、Client的管理应用。    |
-| base-sysadmin          | https://github.com/opensabre/base-sysadmin          |     |
+| base-sysadmin          | https://github.com/opensabre/base-sysadmin          | 基础应用，如验证码发送、验证，审计信息管理、字典管理等    |
 | base-k8s               | https://github.com/opensabre/base-k8s               | opensabre基础设施依赖中间件创建ymal，如nacos，redis，mq等中间件的初使化。 |
 | docs                   | https://github.com/opensabre/docs                   | opensabre的文档工程。                                        |
 | examples               | https://github.com/opensabre/examples               | examples工程，使用opensabre的一些案例工程。                  |

@@ -30,6 +30,36 @@
 
 6. 升级 Lombok 版本以适配更新的 JDK 编译环境。
 
+## **2025-10-25**
+
+### 0.2.0
+
+1. 新增审计日志能力，在 `opensabre-starter-boot` 中提供 `@Audit`、`@EnabledAudit`、`OperationType`、审计切面、审计事件和默认事件处理器。
+
+2. `opensabre-base-dependencies` 增加审计相关依赖管理，框架版本升级至 `0.2.0`。
+
+3. 优化 Jib Docker 打包参数，支持容器镜像构建发布。
+
+4. 升级 HttpClient 5 相关依赖，修复 Feign HC5 调用场景中的兼容问题。
+
+5. 调整 Servlet API 依赖范围，避免运行期缺少 Servlet 相关类。
+
+## **2025-10-10**
+
+### 0.1.1
+
+1. 框架主版本升级至 `0.1.1`，并升级 Spring Boot 至 `3.4.1`、Spring Cloud 至 `2024.0.0`、Spring Cloud Alibaba 至 `2023.0.3.2`。
+
+2. 优化依赖边界，新增 `opensabre-starter-webmvc`，为 Web 能力从 `opensabre-web` 中拆分做准备。
+
+3. Maven 发布链路迁移到 `central-publishing-maven-plugin`，调整 Sonatype Central 发布地址和 Maven 插件版本。
+
+4. API 文档能力升级，修复 Knife4j 文档显示问题，并增加 Bearer Authorization 鉴权参数。
+
+5. 升级 MySQL 驱动、MyBatis-Plus、Guava 等第三方依赖版本。
+
+6. 增加 Jib Docker 打包插件，补齐后续镜像构建能力。
+
 ## **2024-08-06**
 
 1. JDK升级至17+，服务框架springboot升级到3.2.3，springcloud版本升级到2023.0.0

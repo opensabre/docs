@@ -8,16 +8,21 @@ Gitee地址：https://gitee.com/opensabre/opensabre-framework
 
 ## 子工程介绍
 
-| module名称                    | 子目录                           | 主要功能及用途                                                 |
-| -----------------------------| ------------------------------- | ------------------------------------------------------------ |
-| opensabre-framework          | opensabre-framework             |  opensabre服务框架父工程，定义通用配置，如打包、仓库、发布等各模块配置  |
-| opensabre-base-dependencies  | opensabre-base-dependencies     |  opensabre服务框架工程的依赖管理，如版本、配置等定义  |
-| opensabre-starter-register   | opensabre-starter-register      |  注册中心相关starter模块，用于封装简化注册中心使用，约定使用规范等|
-| opensabre-starter-config     | opensabre-starter-config        |  配置中心相关starter模块，用于封装简化配置中心使用，约定使用规范等|
-| opensabre-starter-boot       | opensabre-starter-boot          |  springboot web相关starter模块，用于封装统一异常处理、统一报文、swagger文档等相关规范约定等|
-| opensabre-starter-rpc        | opensabre-starter-rpc           |  远程调用相关starter模块，用于封装应用间相互调用、路由、超时等通用配置模块|
-| opensabre-starter-cache      | opensabre-starter-cache         |  缓存相关starter模块，用于封装多级缓存，如内存、redis等缓存的规范和约定     |
-| opensabre-starter-persistence| opensabre-starter-persistence   |  数据持久化相关starter模块，用于封装数据库操作、实体转换等数据持久化规范和约定|
-| opensabre-starter-eda        | opensabre-starter-eda           |  事件驱动starter模块，用于封装和规范消息、事件等操作|
-| opensabre-test               | opensabre-test                  |  通用测试工具包|
-| opensabre-web                | opensabre-web                   |  web操作通用工具、配置等|
+当前 framework 主线版本为 `0.4.0`，工程按依赖管理、公共基础能力、Web 技术栈、微服务能力、数据能力和治理能力拆分。业务应用建议通过 `opensabre-base-dependencies` 统一管理版本，并按场景组合 starter。
+
+| module名称 | 子目录 | 主要功能及用途 |
+| --- | --- | --- |
+| opensabre-framework | opensabre-framework | opensabre 服务框架父工程，聚合各子模块，统一编译、打包、发布和版本号配置 |
+| opensabre-base-dependencies | opensabre-base-dependencies | Opensabre BOM，统一管理 Spring Boot、Spring Cloud、Spring Cloud Alibaba、第三方组件和 Opensabre 模块版本 |
+| opensabre-web | opensabre-web | 公共返回模型、异常模型、校验注解、用户上下文、实体转换等轻量 Web 基础能力 |
+| opensabre-starter-boot | opensabre-starter-boot | 通用启动 starter，提供配置加密、监控、链路追踪、参数校验、脱敏、OpenAPI 等基础能力 |
+| opensabre-starter-webmvc | opensabre-starter-webmvc | Spring MVC 应用入口，封装 WebMVC 运行时依赖、Undertow 容器、统一响应和统一异常处理 |
+| opensabre-starter-webflux | opensabre-starter-webflux | Spring WebFlux 响应式应用入口，封装 WebFlux 运行时依赖和响应式异常处理 |
+| opensabre-starter-register | opensabre-starter-register | 注册中心 starter，封装 Nacos 注册发现、实例元数据注册和默认配置 |
+| opensabre-starter-config | opensabre-starter-config | 配置中心 starter，封装 Nacos 配置中心接入和 Opensabre 默认配置 |
+| opensabre-starter-rpc | opensabre-starter-rpc | 远程调用 starter，封装 OpenFeign、LoadBalancer、Sentinel 和调用链路相关配置 |
+| opensabre-starter-cache | opensabre-starter-cache | 缓存 starter，封装 JetCache Redis 多级缓存默认配置和使用规范 |
+| opensabre-starter-persistence | opensabre-starter-persistence | 数据持久化 starter，封装 MyBatis-Plus、分页、防全表更新、非法 SQL 拦截和持久化异常处理 |
+| opensabre-starter-eda | opensabre-starter-eda | 事件驱动 starter，封装 Spring Cloud Bus、RabbitMQ 等事件总线能力 |
+| opensabre-starter-governance | opensabre-starter-governance | 治理 SDK starter，提供审计日志、限次注解、AOP 和自动装配，并统一调用 sysadmin 管理数据与规则 |
+| opensabre-test | opensabre-test | 通用测试工具包，供框架模块和业务模块复用 |
