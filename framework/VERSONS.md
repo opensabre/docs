@@ -1,5 +1,19 @@
 # 更新日志
 
+## **2026-07-18**
+
+### 0.5.0
+
+1. `opensabre-starter-eda` 调整为进程内异步事件分发基础设施，提供 `EdaEvent`、`EdaEventPublisher` 与 `EdaEventHandler`；消息队列传输由业务应用按需实现，不再由 starter 强绑定 RabbitMQ。
+
+2. governance 审计改为发布 `governance.audit.created` EDA 事件，再由默认处理器调用 sysadmin 入库。需要自定义处理时，实现同一事件类型的 `EdaEventHandler<AuditInfo>`。
+
+3. Servlet、Springdoc、Knife4j、OpenAPI 配置和 REST 映射通知从 `opensabre-starter-boot` 收敛到 `opensabre-starter-webmvc`。MVC 服务必须同时声明 boot 与 webmvc starter；WebFlux 服务不再被 Servlet 依赖污染。
+
+4. persistence 的 MVC 持久化异常映射改为仅在 Servlet Web 应用中自动装配，非 Web 或 WebFlux 应用可安全复用持久化 starter。
+
+5. 统一依赖 BOM 与所有框架模块发布为 `0.5.0`。
+
 ## **2026-07-01**
 
 ### 0.4.0

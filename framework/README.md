@@ -10,14 +10,14 @@ RBAC权限管理、授权认证、网关管理、服务治理、审计日志、�
 
 ## 当前版本
 
-当前 framework 主线版本为 `0.4.0`，主要模块包括：
+当前 framework 主线版本为 `0.5.0`，主要模块包括：
 
 - `opensabre-base-dependencies`：统一依赖版本管理。
 - `opensabre-web`：公共返回模型、异常、校验、上下文等基础能力。
-- `opensabre-starter-boot`：启动、配置加密、监控、链路追踪、脱敏、OpenAPI 等基础能力。
-- `opensabre-starter-webmvc` / `opensabre-starter-webflux`：MVC 与响应式 Web 技术栈入口。
+- `opensabre-starter-boot`：启动、配置加密、监控、链路追踪、脱敏等通用能力，不绑定 Servlet Web 技术栈。
+- `opensabre-starter-webmvc` / `opensabre-starter-webflux`：MVC 与响应式 Web 技术栈入口；OpenAPI 与 Knife4j 归属 MVC starter。
 - `opensabre-starter-config` / `opensabre-starter-register` / `opensabre-starter-rpc`：配置中心、注册发现、远程调用等微服务能力。
-- `opensabre-starter-persistence` / `opensabre-starter-cache` / `opensabre-starter-eda`：持久化、缓存、事件能力。
+- `opensabre-starter-persistence` / `opensabre-starter-cache` / `opensabre-starter-eda`：持久化、缓存、进程内异步事件能力。
 - `opensabre-starter-governance`：审计日志和限次的注解 SDK，统一调用 sysadmin 进行数据入库和规则管理。
 
 </br>

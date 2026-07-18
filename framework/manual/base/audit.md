@@ -10,7 +10,7 @@
 <dependency>
     <groupId>io.github.opensabre</groupId>
     <artifactId>opensabre-starter-governance</artifactId>
-    <version>0.4.0</version>
+    <version>0.5.0</version>
 </dependency>
 ```
 
@@ -70,7 +70,7 @@ CREATE, UPDATE, DELETE, QUERY, LOGIN, LOGOUT, SCAN, EXPORT, IMPORT, DOWNLOAD, UP
 
 ## 统一入库
 
-starter 默认会把审计事件交给 sysadmin：
+starter 默认把审计信息发布为本地 `governance.audit.created` EDA 事件，再由默认处理器交给 sysadmin：
 
 ```yaml
 opensabre:
@@ -86,17 +86,23 @@ sysadmin 负责审计日志的统一入库、查询和后续管理。
 ## 自定义事件处理
 
 ```java
+import io.github.opensabre.eda.api.EdaEvent;
+import io.github.opensabre.eda.api.EdaEventHandler;
 import io.github.opensabre.governance.audit.entity.AuditInfo;
-import io.github.opensabre.governance.audit.event.AuditEvent;
-import org.springframework.context.ApplicationListener;
+import io.github.opensabre.governance.audit.event.DefaultAuditEventHandler;
 import org.springframework.stereotype.Component;
 
 @Component
-public class AuditEventHandler implements ApplicationListener<AuditEvent> {
+public class AuditEventHandler implements EdaEventHandler<AuditInfo> {
 
     @Override
-    public void onApplicationEvent(AuditEvent event) {
-        AuditInfo auditInfo = (AuditInfo) event.getSource();
+    public String eventType() {
+        return DefaultAuditEventHandler.EVENT_TYPE;
+    }
+
+    @Override
+    public void handle(EdaEvent<AuditInfo> event) {
+        AuditInfo auditInfo = event.payload();
         // 写入数据库、消息队列或外部审计平台
     }
 }

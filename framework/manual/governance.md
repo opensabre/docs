@@ -8,14 +8,14 @@
 <dependency>
     <groupId>io.github.opensabre</groupId>
     <artifactId>opensabre-starter-governance</artifactId>
-    <version>0.4.0</version>
+    <version>0.5.0</version>
 </dependency>
 ```
 
 Gradle：
 
 ```groovy
-implementation 'io.github.opensabre:opensabre-starter-governance:0.4.0'
+implementation 'io.github.opensabre:opensabre-starter-governance:0.5.0'
 ```
 
 ## 配置项
@@ -62,7 +62,7 @@ public boolean add(@RequestBody UserForm userForm) {
 }
 ```
 
-审计切面会记录操作类型、模块、操作人、客户端 IP、请求地址、请求参数、响应结果、异常信息和耗时，并调用 sysadmin 的审计接口统一入库。
+审计切面会记录操作类型、模块、操作人、客户端 IP、请求地址、请求参数、响应结果、异常信息和耗时。0.5.0 起它发布本地 EDA 事件，由默认处理器调用 sysadmin 的审计接口统一入库；事件处理不会阻塞业务请求。
 
 ## 限次
 
