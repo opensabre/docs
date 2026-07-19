@@ -8,14 +8,14 @@
 <dependency>
     <groupId>io.github.opensabre</groupId>
     <artifactId>opensabre-starter-governance</artifactId>
-    <version>0.5.0</version>
+    <version>0.5.1</version>
 </dependency>
 ```
 
 Gradle：
 
 ```groovy
-implementation 'io.github.opensabre:opensabre-starter-governance:0.5.0'
+implementation 'io.github.opensabre:opensabre-starter-governance:0.5.1'
 ```
 
 ## 配置项
@@ -33,6 +33,8 @@ opensabre:
     ratelimit:
       enabled: true
       fail-open: true
+    usage:
+      transport: EDA
 ```
 
 | 配置项 | 说明 |
@@ -42,6 +44,7 @@ opensabre:
 | `opensabre.governance.audit.enabled` | 审计能力开关 |
 | `opensabre.governance.ratelimit.enabled` | 限次能力开关 |
 | `opensabre.governance.ratelimit.fail-open` | sysadmin 调用异常时是否放行 |
+| `opensabre.governance.usage.transport` | 使用量上报通道：默认 `EDA`，可选 `HTTP` |
 
 ## 审计日志
 
@@ -62,7 +65,7 @@ public boolean add(@RequestBody UserForm userForm) {
 }
 ```
 
-审计切面会记录操作类型、模块、操作人、客户端 IP、请求地址、请求参数、响应结果、异常信息和耗时。0.5.0 起它发布本地 EDA 事件，由默认处理器调用 sysadmin 的审计接口统一入库；事件处理不会阻塞业务请求。
+审计切面会记录操作类型、模块、操作人、客户端 IP、请求地址、请求参数、响应结果、异常信息和耗时。0.5.1 起它发布本地 EDA 事件，由默认处理器调用 sysadmin 的审计接口统一入库；事件处理不会阻塞业务请求。
 
 ## 限次
 
@@ -86,6 +89,18 @@ public boolean sendSms(@RequestParam String mobile) {
 ```
 
 限次切面会解析注解和 SpEL key，调用 sysadmin 的 `/ratelimit/check` 接口完成限次判断。sysadmin 侧负责动态场景、规则、算法和计数存储。
+
+## 使用量统计
+
+验证码、限次和通知可通过类型化 recorder 记录尝试、成功和失败；默认使用 EDA 远程 transport，业务应用需提供对应 transport 实现。若暂不使用消息通道，可配置 `opensabre.governance.usage.transport=HTTP`，由 Sysadmin 的 `/usage-counters/records` 接口异步聚合。
+
+```java
+captchaUsageRecorder.generateSuccess("login");
+rateLimitUsageRecorder.allowed("api-login");
+notificationUsageRecorder.templateSendFailure("password-reset");
+```
+
+使用量事件只用于观测，不能替代同步的限次放行判断；记录中不得包含验证码、通知正文、手机号等敏感数据。
 
 ## 使用建议
 

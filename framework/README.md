@@ -10,7 +10,7 @@ RBAC权限管理、授权认证、网关管理、服务治理、审计日志、�
 
 ## 当前版本
 
-当前 framework 主线版本为 `0.5.0`，主要模块包括：
+当前 framework 主线版本为 `0.5.1`，主要模块包括：
 
 - `opensabre-base-dependencies`：统一依赖版本管理。
 - `opensabre-web`：公共返回模型、异常、校验、上下文等基础能力。

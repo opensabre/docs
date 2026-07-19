@@ -19,7 +19,7 @@
 
 ## Opensabre 模块版本
 
-当前文档对应 framework `0.5.0`。业务项目建议通过 `opensabre-base-dependencies` 统一管理 Opensabre starter 版本。
+当前文档对应 framework `0.5.1`。业务项目建议通过 `opensabre-base-dependencies` 统一管理 Opensabre starter 版本。
 
 | 模块 | 说明 |
 | --- | --- |

@@ -17,7 +17,7 @@ opensabre-framework默认包含了数据脱敏的模块，开发者给通过注�
 | 依赖软件                    | 要求     | 备注                                             |
 | ------------------------- | -------- | ------------------------------------------------|
 | java                      | 17+      | 必须                                             |
-| opensabre-starter-boot    | 0.5.0    |                                                 |
+| opensabre-starter-boot    | 0.5.1    |                                                 |
 
 ## 开发
 
@@ -34,7 +34,7 @@ opensabre-framework默认包含了数据脱敏的模块，开发者给通过注�
 <dependency>
     <groupId>io.github.opensabre</groupId>
     <artifactId>opensabre-starter-boot</artifactId>
-    <version>0.5.0</version>
+    <version>0.5.1</version>
 </dependency>
 ```
 
@@ -42,7 +42,7 @@ opensabre-framework默认包含了数据脱敏的模块，开发者给通过注�
 
 ```groovy
 dependencies {
-    implementation 'io.github.opensabre:opensabre-starter-boot:0.5.0'
+    implementation 'io.github.opensabre:opensabre-starter-boot:0.5.1'
 }
 ```
 

@@ -1,5 +1,15 @@
 # 更新日志
 
+## **2026-07-19**
+
+### 0.5.1
+
+1. governance starter 新增通用使用量计次 API：验证码、限次和通知可通过类型化 recorder 上报使用尝试、成功和失败。
+
+2. 使用量上报默认走 EDA 远程 transport；设置 `opensabre.governance.usage.transport=HTTP` 时由 Sysadmin HTTP 接口受理。上报失败不会影响主营业务。
+
+3. 限次同步判定抽象为 `GovernanceRateLimiter`，明确与异步使用量观测分离。
+
 ## **2026-07-18**
 
 ### 0.5.0

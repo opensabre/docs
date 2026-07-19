@@ -1,11 +1,11 @@
 # 事件中心
 
-`opensabre-starter-eda` 在 0.5.0 提供进程内异步事件分发。它定义稳定的事件信封、发布器和处理器接口，不绑定 RabbitMQ、Kafka 或 Spring Cloud Bus；需要跨进程投递时，由应用实现 transport 并复用本地处理器。
+`opensabre-starter-eda` 在 0.5.1 提供进程内异步事件分发。它定义稳定的事件信封、发布器和处理器接口，不绑定 RabbitMQ、Kafka 或 Spring Cloud Bus；需要跨进程投递时，由应用实现 transport 并复用本地处理器。
 
 ## 引入依赖
 
 ```groovy
-implementation 'io.github.opensabre:opensabre-starter-eda:0.5.0'
+implementation 'io.github.opensabre:opensabre-starter-eda:0.5.1'
 ```
 
 ## 发布与订阅

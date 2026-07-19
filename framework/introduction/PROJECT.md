@@ -8,7 +8,7 @@ Gitee地址：https://gitee.com/opensabre/opensabre-framework
 
 ## 子工程介绍
 
-当前 framework 主线版本为 `0.5.0`，工程按依赖管理、公共基础能力、Web 技术栈、微服务能力、数据能力和治理能力拆分。业务应用建议通过 `opensabre-base-dependencies` 统一管理版本，并按场景组合 starter。
+当前 framework 主线版本为 `0.5.1`，工程按依赖管理、公共基础能力、Web 技术栈、微服务能力、数据能力和治理能力拆分。业务应用建议通过 `opensabre-base-dependencies` 统一管理版本，并按场景组合 starter。
 
 | module名称 | 子目录 | 主要功能及用途 |
 | --- | --- | --- |
