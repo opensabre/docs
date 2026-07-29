@@ -1,5 +1,14 @@
 # 更新日志
 
+## **2026-07-29**
+
+### 0.7.0
+
+1. Governance Starter 新增错误码目录，应用启动后异步注册业务错误码快照。
+2. 新增字典声明、注册、预热、本地缓存读取与历史停用项回显。
+3. 新增 `opensabre-starter-security`，提供内部短 Token、逐跳重签、可信用户上下文与 active/previous 双密钥轮换。
+4. 0.7.0 支持 Servlet、Feign 和受控 RestClient；WebFlux/WebClient 暂不支持。
+
 ## **2026-07-19**
 
 ### 0.5.1
