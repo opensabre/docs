@@ -21,7 +21,7 @@
 | 依赖软件                    | 要求     | 备注                                             |
 | ------------------------- | -------- | ------------------------------------------------|
 | java                      | 17+      | 必须                                             |
-| opensabre-starter-boot    | 0.5.1    |                                                 |
+| opensabre-starter-boot    | 0.7.1    |                                                 |
 
 ## 开发
 
@@ -38,7 +38,7 @@
 <dependency>
     <groupId>io.github.opensabre</groupId>
     <artifactId>opensabre-starter-boot</artifactId>
-    <version>0.5.1</version>
+    <version>0.7.1</version>
 </dependency>
 ```
 
@@ -46,7 +46,7 @@
 
 ```groovy
 dependencies {
-    implementation 'io.github.opensabre:opensabre-starter-boot:0.5.1'
+    implementation 'io.github.opensabre:opensabre-starter-boot:0.7.1'
 }
 ```
 

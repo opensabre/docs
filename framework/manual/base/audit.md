@@ -10,7 +10,7 @@
 <dependency>
     <groupId>io.github.opensabre</groupId>
     <artifactId>opensabre-starter-governance</artifactId>
-    <version>0.5.1</version>
+    <version>0.7.1</version>
 </dependency>
 ```
 

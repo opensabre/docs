@@ -1,6 +1,6 @@
 # 内部 Token 认证
 
-`opensabre-starter-security` 是 0.7.0 新增的服务间认证组件。它将已校验身份转换为短期、面向单个目标服务的 HS256 Token，并在每一跳重新签发。
+`opensabre-starter-security` 是 0.7.0 新增的服务间认证组件。它将已校验身份转换为短期、面向单个目标服务的 HS256 Token，并在每一跳重新签发。0.7.1 补齐可信身份提取、权限语义保持和双凭据拒绝。
 
 ![内部 Token 逐跳认证](framework/assets/internal-token-flow.svg)
 
@@ -10,7 +10,7 @@
 - 首应用完成 JWT 校验和接口授权后签发第一跳 Token。
 - 后续每跳面向目标服务重签，禁止原样转发。
 - Token 固定放在 `x-client-token`，重签前清除旧身份 Header。
-- 0.7.0 支持 Servlet、Feign、受控 RestClient；暂不支持 WebFlux/WebClient。
+- 0.7.1 支持 Servlet、Feign、受控 RestClient；暂不支持 WebFlux/WebClient。
 
 ## 配置
 
@@ -38,6 +38,20 @@ opensabre:
 ## 逐跳验证
 
 接收方验证签名、`kid`、`iss/src`、`aud/dst`、时间、Token 大小和 `hop`。`jti/parent_jti` 串联调用链，`roles/scope` 承载授权快照，`ext` 只能包含白名单键。
+
+## Claims 与权限映射
+
+| Claim | 含义 | Spring Security 映射 |
+| --- | --- | --- |
+| `sub`、`username` | 已认证的用户标识与用户名 | `Authentication` principal |
+| `roles` | 权限快照；既可包含 `ROLE_ADMIN`，也可包含 `ORDER_WRITE` 等直接 Authority | 原样映射为 Authority，不添加或删除 `ROLE_` |
+| `scope` | OAuth scope 快照，例如 `user.read` | 映射为 `SCOPE_user.read` |
+| `iss/src`、`aud/dst` | 当前签发服务与目标服务 | 用于信任边界校验，不作为业务权限 |
+| `jti`、`parent_jti`、`hop` | 逐跳调用链标识 | 用于追踪与防止无限转发 |
+
+首应用只从已认证的 Spring Security `Authentication` 提取 subject、username、直接 Authority、`ROLE_` 角色和 `SCOPE_` 权限，不能使用未验签 JWT 或普通请求 Header 提升身份。下游收到 `roles=[ROLE_ADMIN, ORDER_WRITE]`、`scope=[user.read]` 时，对应 Authority 为 `ROLE_ADMIN`、`ORDER_WRITE`、`SCOPE_user.read`。
+
+外部 `Authorization: Bearer ...` 与 `x-client-token` 不能同时出现；同时出现时返回 401（`AMBIGUOUS_CREDENTIALS`）。Feign/受控 RestClient 在逐跳签发前会清理 `Authorization`、旧 `x-client-token` 和旧 `x-client-token-user`，避免凭据混用。
 
 Spring Security 应用需将 `InternalTokenAuthenticationFilter` 放在 `BearerTokenAuthenticationFilter` 之前。验证成功后，身份同步绑定到 `UserContextHolder`，请求结束时清理。
 
