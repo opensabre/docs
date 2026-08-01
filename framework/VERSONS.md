@@ -1,5 +1,15 @@
 # 更新日志
 
+## **2026-08-01**
+
+### 0.7.1
+
+1. 错误码目录快照显式携带定义归属字段，与 Sysadmin 的 owner/scope 治理模型对齐。
+2. 治理启动注册增加有界重试、退避、指标与 Actuator 状态；注册失败仍不阻塞应用启动。
+3. Feign 与受控 RestClient 重签前清理全部旧凭据，Servlet 同时收到外部 Bearer 和内部 Token 时明确拒绝。
+4. 内部 Token 保持直接 Authority、`ROLE_` 角色与 `SCOPE_` 权限语义，并只从已认证身份生成首跳 Claims。
+5. Maven Central 坐标 `io.github.opensabre:opensabre-framework:0.7.1` 已发布；示例项目同步升级并覆盖内部 Token 正向、异常和密钥轮换 E2E。
+
 ## **2026-07-29**
 
 ### 0.7.0

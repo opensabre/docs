@@ -5,7 +5,7 @@
 ## 引入依赖
 
 ```groovy
-implementation 'io.github.opensabre:opensabre-starter-eda:0.5.1'
+implementation 'io.github.opensabre:opensabre-starter-eda:0.7.1'
 ```
 
 ## 发布与订阅

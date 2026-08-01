@@ -13,8 +13,10 @@
 | 治理 SDK | 审计日志、限次、错误码目录与字典组件，通过 sysadmin 统一管理 |
 | 服务间安全 | 内部短 Token、逐跳重签、可信用户上下文与双密钥轮换 |
 
-## 0.7.0 新增能力
+## 0.7.x 新增能力
 
 - [错误码目录](framework/manual/error-catalog.md)
 - [字典组件](framework/manual/dictionary.md)
 - [内部 Token 认证](framework/manual/internal-token.md)
+
+当前稳定版本为 `0.7.1`。该版本补齐治理注册重试与可观测性、错误码归属协议，以及内部 Token 的可信 Claims、Authority 语义和双凭据防护。
