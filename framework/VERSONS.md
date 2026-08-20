@@ -1,5 +1,22 @@
 # 更新日志
 
+## **2026-08-21**
+
+### 1.1.1
+
+1. 默认容器运行时升级为 Java 25，保持 Java 21 编译基线，并完成 JDK 21/JDK 25 CI 验证。
+2. Jib 镜像启用精简运行时参数，降低默认堆、线程栈和元空间占用；Sentinel 调整为可选能力。
+3. Framework 1.1.1 已发布，base 应用完成逐个构建、上传与部署验证。
+
+## **2026-08-18**
+
+### 1.1.0
+
+1. Spring Boot 升级至 4.1.0，Framework CI 同时验证 JDK 21 与 JDK 25。
+2. `opensabre-common.yml` 使用 `optional:nacos:` 导入；首次启动时 Nacos 不可用、Data ID 缺失或内容为空不会阻断未启用内部 Token 的应用。
+3. 公共配置 Data ID 与 Group 支持 `OPENSABRE_COMMON_CONFIG_DATA_ID`、`OPENSABRE_COMMON_CONFIG_GROUP` 覆盖；启用内部 Token 时，空或非法热更新会被拒绝并保留最后一个有效密钥快照。
+4. Spring Cloud Alibaba 继续使用 `2025.1.0.0`。该版本的上游 GA 文档仅声明 Spring Boot 4.0.x；OpenSabre 1.1.0 基于 JDK 21/25 与示例回归验证发布，使用 Alibaba 组件的应用升级后应完成自身 Nacos、注册发现和业务链路回归。
+
 ## **2026-08-01**
 
 ### 0.7.1
@@ -9,6 +26,12 @@
 3. Feign 与受控 RestClient 重签前清理全部旧凭据，Servlet 同时收到外部 Bearer 和内部 Token 时明确拒绝。
 4. 内部 Token 保持直接 Authority、`ROLE_` 角色与 `SCOPE_` 权限语义，并只从已认证身份生成首跳 Claims。
 5. Maven Central 坐标 `io.github.opensabre:opensabre-framework:0.7.1` 已发布；示例项目同步升级并覆盖内部 Token 正向、异常和密钥轮换 E2E。
+
+### 0.7.7
+
+1. 外部 JWT 经 Spring Security 验证后自动绑定 `UserContextHolder`，修复审计日志与 MyBatis 审计字段错误回退为 `system`。
+2. `opensabre-common.yml` 内部 Token 配置支持 Nacos 热刷新、完整校验和原子快照切换；非法或倒退版本继续使用上一份有效配置。
+3. 新增安全的实例密钥版本 Actuator 状态端点，支持 previous 密钥退役前的全实例确认。
 
 ## **2026-07-29**
 
