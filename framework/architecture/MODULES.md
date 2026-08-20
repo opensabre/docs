@@ -14,7 +14,7 @@ opensabre-framework 是 Opensabre 项目群的框架层，主要提供公共模�
 | Web 技术栈 | `opensabre-starter-webflux` | Spring WebFlux 应用入口，提供响应式 Web 异常处理等能力 |
 | 微服务能力 | `opensabre-starter-config` | Nacos 配置中心和 Opensabre 配置默认值 |
 | 微服务能力 | `opensabre-starter-register` | Nacos 注册发现、实例元数据注册 |
-| 微服务能力 | `opensabre-starter-rpc` | OpenFeign、LoadBalancer、Sentinel 和调用链路相关配置 |
+| 微服务能力 | `opensabre-starter-rpc` | OpenFeign、LoadBalancer 和调用链路相关配置；Sentinel 可选 |
 | 数据能力 | `opensabre-starter-persistence` | MyBatis-Plus、分页、防全表更新、非法 SQL 拦截；MVC 异常映射仅在 Servlet 应用装配 |
 | 数据能力 | `opensabre-starter-cache` | JetCache Redis 多级缓存默认配置 |
 | 事件能力 | `opensabre-starter-eda` | 进程内异步事件分发，MQ transport 由应用实现 |

@@ -6,6 +6,7 @@
 
 * [**用户手册**](framework/manual/README.md)
   * [快速入门](framework/manual/QUICKSTART.md)
+  * [升级到 1.1.1](framework/manual/migration-1.1.md)
   * [基础能力](framework/manual/base/README.md)
     * [日志打印/追踪](framework/manual/base/log.md)
     * [表单数据校验](framework/manual/base/validation.md)

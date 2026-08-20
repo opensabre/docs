@@ -13,10 +13,17 @@
 | 治理 SDK | 审计日志、限次、错误码目录与字典组件，通过 sysadmin 统一管理 |
 | 服务间安全 | 内部短 Token、逐跳重签、可信用户上下文与双密钥轮换 |
 
+## 1.1.1 升级
+
+- [升级到 1.1.1](migration-1.1.md)
+- [配置中心与 Nacos 公共配置](config.md)
+
+当前版本为 `1.1.1`：Spring Boot 4.1.0、Java 21 编译基线、Java 25 容器运行时，并在 JDK 21 与 JDK 25 验证。使用 Spring Cloud Alibaba 的应用须完成自身集成回归，详见升级指南。
+
 ## 0.7.x 新增能力
 
 - [错误码目录](framework/manual/error-catalog.md)
 - [字典组件](framework/manual/dictionary.md)
 - [内部 Token 认证](framework/manual/internal-token.md)
 
-当前稳定版本为 `0.7.1`。该版本补齐治理注册重试与可观测性、错误码归属协议，以及内部 Token 的可信 Claims、Authority 语义和双凭据防护。
+0.7.x 补齐治理注册重试与可观测性、错误码归属协议，以及内部 Token 的可信 Claims、Authority 语义和双凭据防护。

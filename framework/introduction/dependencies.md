@@ -28,7 +28,7 @@
 | `opensabre-starter-webflux` | Spring WebFlux 响应式应用入口 |
 | `opensabre-starter-config` | Nacos 配置中心 |
 | `opensabre-starter-register` | Nacos 注册发现 |
-| `opensabre-starter-rpc` | OpenFeign、LoadBalancer、Sentinel |
+| `opensabre-starter-rpc` | OpenFeign、LoadBalancer；Sentinel 为可选依赖 |
 | `opensabre-starter-persistence` | MyBatis-Plus、分页、SQL 拦截 |
 | `opensabre-starter-cache` | JetCache 多级缓存 |
 | `opensabre-starter-eda` | 进程内异步事件分发；可由应用对接 MQ transport |
