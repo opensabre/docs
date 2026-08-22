@@ -1,8 +1,8 @@
-# Opensabre一站式微服务解决方案
+# OpenSabre 一站式微服务解决方案
 
 </br>
 
-💪Opensabre是基于SpringCloud2023的微服务开发平台，整合了Spring Security、Springcloud Alibaba等组件。包含了基础的
+💪OpenSabre 1.1.1 是基于 Java 21、Spring Boot 4.1 和 Spring Cloud 2025 的微服务开发平台，整合了 Spring Security、Spring Cloud Alibaba 等组件。包含了基础的
 
 RBAC权限管理、授权认证、网关管理、服务治理、审计日志等系统管理基础应用。定义了相关开发规范、风格并落地在框架层，开箱即
 
@@ -11,4 +11,3 @@ RBAC权限管理、授权认证、网关管理、服务治理、审计日志等�
 </br>
 
 [![Stargazers over time](https://starchart.cc/zhoutaoo/SpringCloud.svg)](https://starchart.cc/zhoutaoo/SpringCloud)
-

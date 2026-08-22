@@ -8,7 +8,7 @@
 
 </br>
 
-💪Opensabre是基于SpringCloud2023的微服务开发平台，整合了Spring Security、Springcloud Alibaba等组件。
+💪OpenSabre 1.1.1 是基于 Java 21、Spring Boot 4.1 和 Spring Cloud 2025 的微服务开发平台，整合了 Spring Security、Spring Cloud Alibaba 等组件。
 
 包含了基础的RBAC权限管理、授权认证、网关管理、服务治理、审计日志等系统管理基础应用。
 
@@ -31,4 +31,3 @@
 </br>
 
  [ Github](https://github.com/opensabre)  [开始使用 Let Go](/README.md) 
-

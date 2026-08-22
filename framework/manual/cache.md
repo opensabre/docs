@@ -13,11 +13,11 @@ opensabre-framework默认集成了caffeine，分别提供基于jvm和redis的多
 
 | 依赖软件                    | 要求     | 备注                                             |
 | ------------------------- | -------- | ------------------------------------------------|
-| java                      | 17+      | 必须                                             |
+| java                      | 21+      | 必须                                             |
 | redis                     | 6.0+     | 必须                                             |
-| opensabre-starter-boot    | 0.7.1    | web项目用于测试                                   |
-| opensabre-starter-webmvc  | 0.7.1    | web项目用于测试                                   |
-| opensabre-starter-cache   | 0.7.1    | 必须                                             |
+| opensabre-starter-boot    | 1.1.1    | web项目用于测试                                   |
+| opensabre-starter-webmvc  | 1.1.1    | web项目用于测试                                   |
+| opensabre-starter-cache   | 1.1.1    | 必须                                             |
 
 ## 开发
 
@@ -33,17 +33,17 @@ opensabre-framework默认集成了caffeine，分别提供基于jvm和redis的多
 <dependency>
     <groupId>io.github.opensabre</groupId>
     <artifactId>opensabre-starter-boot</artifactId>
-    <version>0.7.1</version>
+    <version>1.1.1</version>
 </dependency>
 <dependency>
     <groupId>io.github.opensabre</groupId>
     <artifactId>opensabre-starter-webmvc</artifactId>
-    <version>0.7.1</version>
+    <version>1.1.1</version>
 </dependency>
 <dependency>
     <groupId>io.github.opensabre</groupId>
     <artifactId>opensabre-starter-cache</artifactId>
-    <version>0.7.1</version>
+    <version>1.1.1</version>
 </dependency>
 ```
 
@@ -51,9 +51,9 @@ opensabre-framework默认集成了caffeine，分别提供基于jvm和redis的多
 
 ```groovy
 dependencies {
-    implementation 'io.github.opensabre:opensabre-starter-boot:0.7.1'
-    implementation 'io.github.opensabre:opensabre-starter-webmvc:0.7.1'
-    implementation 'io.github.opensabre:opensabre-starter-cache:0.7.1'
+    implementation 'io.github.opensabre:opensabre-starter-boot:1.1.1'
+    implementation 'io.github.opensabre:opensabre-starter-webmvc:1.1.1'
+    implementation 'io.github.opensabre:opensabre-starter-cache:1.1.1'
 }
 ```
 

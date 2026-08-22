@@ -1,6 +1,6 @@
 # 内部 Token 认证
 
-`opensabre-starter-security` 是 0.7.0 新增的服务间认证组件。它将已校验身份转换为短期、面向单个目标服务的 HS256 Token，并在每一跳重新签发。0.7.1 补齐可信身份提取、权限语义保持和双凭据拒绝。
+`opensabre-starter-security` 是 0.7.0 新增的服务间认证组件。它将已校验身份转换为短期、面向单个目标服务的 HS256 Token，并在每一跳重新签发。0.7.1 补齐可信身份提取、权限语义保持和双凭据拒绝；1.1.1 延续该协议。
 
 ![内部 Token 逐跳认证](framework/assets/internal-token-flow.svg)
 
@@ -10,7 +10,7 @@
 - 首应用完成 JWT 校验和接口授权后签发第一跳 Token。
 - 后续每跳面向目标服务重签，禁止原样转发。
 - Token 固定放在 `x-client-token`，重签前清除旧身份 Header。
-- 0.7.1 支持 Servlet、Feign、受控 RestClient；暂不支持 WebFlux/WebClient。
+- 0.7.1 以来支持 Servlet、Feign、受控 RestClient；暂不支持 WebFlux/WebClient。
 
 ## 配置
 

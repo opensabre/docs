@@ -4,12 +4,12 @@
 
 | 组件                               | 版本         | 备注        |
 | --------------------------------- | ------------ | ---------- |
-| spring-boot-dependencies          | 3.4.1        |            |
-| spring-cloud-dependencies         | 2024.0.0     |            |
-| spring-cloud-alibaba-dependencies | 2023.0.3.2   |            |
+| spring-boot-dependencies          | 4.1.0        |            |
+| spring-cloud-dependencies         | 2025.1.2     |            |
+| spring-cloud-alibaba-dependencies | 2025.1.0.0   | 上游 GA 文档仍以 Spring Boot 4.0.x 为正式声明，使用前完成应用级回归 |
 | mysql-connector-j                 | 8.2.0        | mysql驱动   |
-| mybatis-plus-boot-starter         | 3.5.5        | 数据持久化   |
-| jetcache-starter-redis-lettuce    | 2.7.7        | 多级缓存    |
+| mybatis-plus-boot-starter         | 3.5.17       | 数据持久化   |
+| jetcache-starter-redis-lettuce    | 2.8.0.RC     | 多级缓存    |
 | knife4j-openapi3                  | 4.5.0        | springdoc swagger3.0 |
 | springdoc-openapi-starter         | 2.7.0        | OpenAPI UI |
 | lombok                            | 1.18.42      |            |
@@ -19,7 +19,7 @@
 
 ## Opensabre 模块版本
 
-当前文档对应 framework `0.7.1`。业务项目建议通过 `opensabre-base-dependencies` 统一管理 Opensabre starter 版本。
+当前文档对应 framework `1.1.1`。业务项目建议通过 `opensabre-base-dependencies` 统一管理 Opensabre starter 版本。
 
 | 模块 | 说明 |
 | --- | --- |

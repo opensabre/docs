@@ -25,8 +25,8 @@ opensabre-framework 是 Opensabre 项目群的框架层，主要提供公共模�
 ### 普通 WebMVC 服务
 
 ```groovy
-implementation "io.github.opensabre:opensabre-starter-boot:0.7.1"
-implementation "io.github.opensabre:opensabre-starter-webmvc:0.7.1"
+implementation "io.github.opensabre:opensabre-starter-boot:1.1.1"
+implementation "io.github.opensabre:opensabre-starter-webmvc:1.1.1"
 ```
 
 `opensabre-starter-webmvc` 已经包含 `spring-boot-starter-web`，默认排除 Tomcat 并使用 Undertow。应用项目不需要再手工引入 `spring-boot-starter-web`。
@@ -34,7 +34,7 @@ implementation "io.github.opensabre:opensabre-starter-webmvc:0.7.1"
 ### WebFlux 服务
 
 ```groovy
-implementation "io.github.opensabre:opensabre-starter-webflux:0.7.1"
+implementation "io.github.opensabre:opensabre-starter-webflux:1.1.1"
 implementation "org.springframework.boot:spring-boot-starter-validation"
 ```
 
@@ -43,11 +43,11 @@ implementation "org.springframework.boot:spring-boot-starter-validation"
 ### 微服务应用
 
 ```groovy
-implementation "io.github.opensabre:opensabre-starter-boot:0.7.1"
-implementation "io.github.opensabre:opensabre-starter-webmvc:0.7.1"
-implementation "io.github.opensabre:opensabre-starter-config:0.7.1"
-implementation "io.github.opensabre:opensabre-starter-register:0.7.1"
-implementation "io.github.opensabre:opensabre-starter-rpc:0.7.1"
+implementation "io.github.opensabre:opensabre-starter-boot:1.1.1"
+implementation "io.github.opensabre:opensabre-starter-webmvc:1.1.1"
+implementation "io.github.opensabre:opensabre-starter-config:1.1.1"
+implementation "io.github.opensabre:opensabre-starter-register:1.1.1"
+implementation "io.github.opensabre:opensabre-starter-rpc:1.1.1"
 ```
 
 `opensabre-starter-rpc` 已依赖 `opensabre-starter-register`，如果只需要远程调用能力，通常不必重复声明 register starter。
@@ -55,8 +55,8 @@ implementation "io.github.opensabre:opensabre-starter-rpc:0.7.1"
 ### 带数据库和缓存的服务
 
 ```groovy
-implementation "io.github.opensabre:opensabre-starter-persistence:0.7.1"
-implementation "io.github.opensabre:opensabre-starter-cache:0.7.1"
+implementation "io.github.opensabre:opensabre-starter-persistence:1.1.1"
+implementation "io.github.opensabre:opensabre-starter-cache:1.1.1"
 ```
 
 `opensabre-starter-persistence` 已依赖 `opensabre-starter-boot`。如果应用还要提供 HTTP 接口，仍需要引入 `opensabre-starter-webmvc` 或 `opensabre-starter-webflux`。
@@ -64,7 +64,7 @@ implementation "io.github.opensabre:opensabre-starter-cache:0.7.1"
 ### 审计和限次治理
 
 ```groovy
-implementation "io.github.opensabre:opensabre-starter-governance:0.7.1"
+implementation "io.github.opensabre:opensabre-starter-governance:1.1.1"
 ```
 
 `opensabre-starter-governance` 面向业务应用提供 `@Audit`、`@RateLimit`、AOP 和自动装配。审计日志入库、限次场景、规则和计数统一由 sysadmin 管理。

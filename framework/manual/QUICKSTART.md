@@ -10,7 +10,7 @@
 
 | 依赖软件        | 要求     | 备注                                                  |
 | ------------- | -------- | ---------------------------------------------------- |
-| java          | 17+      | 必须                                                  |
+| java          | 21+      | 必须                                                  |
 
 ## 开发
 
@@ -26,12 +26,12 @@ WebMVC 项目需要引入 `opensabre-starter-boot` 和 `opensabre-starter-webmvc
 <dependency>
     <groupId>io.github.opensabre</groupId>
     <artifactId>opensabre-starter-boot</artifactId>
-    <version>0.7.1</version>
+    <version>1.1.1</version>
 </dependency>
 <dependency>
     <groupId>io.github.opensabre</groupId>
     <artifactId>opensabre-starter-webmvc</artifactId>
-    <version>0.7.1</version>
+    <version>1.1.1</version>
 </dependency>
 ```
 
@@ -40,21 +40,21 @@ WebMVC 项目需要引入 `opensabre-starter-boot` 和 `opensabre-starter-webmvc
 ```groovy
 plugins {
     id 'java'
-    id 'org.springframework.boot' version '3.4.1'
+    id 'org.springframework.boot' version '4.1.0'
     id 'io.spring.dependency-management' version '1.1.7'
 }
 
 group = 'io.github.opensabre'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17'
+sourceCompatibility = '21'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    implementation 'io.github.opensabre:opensabre-starter-boot:0.7.1'
-    implementation 'io.github.opensabre:opensabre-starter-webmvc:0.7.1'
+    implementation 'io.github.opensabre:opensabre-starter-boot:1.1.1'
+    implementation 'io.github.opensabre:opensabre-starter-webmvc:1.1.1'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
@@ -126,7 +126,7 @@ knife4j文档地址：`http://localhost:8080/doc.html`
 如果业务应用需要审计日志或限次能力，引入 governance starter：
 
 ```groovy
-implementation 'io.github.opensabre:opensabre-starter-governance:0.7.1'
+implementation 'io.github.opensabre:opensabre-starter-governance:1.1.1'
 ```
 
 然后在业务方法上使用 `@Audit` 或 `@RateLimit`，starter 会通过 sysadmin 的接口统一处理审计入库和限次检查。

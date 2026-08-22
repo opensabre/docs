@@ -1,5 +1,6 @@
 * [**项目简介**](PROJECT.md)
 * [**服务框架**](framework/README.md)
 * [**基础应用**](baseapp/README.md)
+* [**1.1.1 发布核对计划**](RELEASE-1.1.1.md)
 * [**常见问题**](QUESTION.md)
 * [**与我联系**](CONTACT.md)

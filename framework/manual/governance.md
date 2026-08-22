@@ -1,6 +1,6 @@
 # 治理 SDK
 
-`opensabre-starter-governance` 从 `0.4.0` 开始提供审计日志和限次能力，`0.7.0` 增加错误码目录与字典组件。`0.7.1` 为启动注册任务增加重试、退避和可观测性。业务应用只需要引入 starter 并添加注解，具体数据入库、规则管理和计数逻辑统一由 sysadmin 承担。
+`opensabre-starter-governance` 从 `0.4.0` 开始提供审计日志和限次能力，`0.7.0` 增加错误码目录与字典组件，`0.7.1` 为启动注册任务增加重试、退避和可观测性。1.1.1 继续提供这些能力，业务应用只需要引入 starter 并添加注解，具体数据入库、规则管理和计数逻辑统一由 sysadmin 承担。
 
 ## 引入依赖
 
@@ -8,14 +8,14 @@
 <dependency>
     <groupId>io.github.opensabre</groupId>
     <artifactId>opensabre-starter-governance</artifactId>
-    <version>0.7.1</version>
+    <version>1.1.1</version>
 </dependency>
 ```
 
 Gradle：
 
 ```groovy
-implementation 'io.github.opensabre:opensabre-starter-governance:0.7.1'
+implementation 'io.github.opensabre:opensabre-starter-governance:1.1.1'
 ```
 
 ## 配置项

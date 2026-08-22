@@ -40,12 +40,6 @@
   * [基础模块](framework/develop/README.md)
       * opensabre-web
       * opensabre-test
-  * [starter](framework/develop/STARTUP.md)
-      * [注册中心](framework/develop/base/discovery.md)
-      * 配置中心
-      * 动态路由
-      * 日志组件
-      * 多级缓存
   * [开发规范](framework/develop/standardized.md)
 
 * [部署运维](framework/DEVOPS.md)

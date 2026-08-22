@@ -3,7 +3,7 @@
 # 快速入门指南
 
 ## 环境要求
-- JDK 17+
+- JDK 21+
 - MySQL 8.0+
 - Redis 6.0+
 
@@ -41,4 +41,4 @@ mvn spring-boot:run
 ```
 
 ## 5. 验证部署
-访问 http://localhost:8080/swagger-ui.html 查看API文档
+访问应用的 Knife4j/OpenAPI 地址查看 API 文档；具体路径以应用的 `docs/` 和网关路由配置为准。

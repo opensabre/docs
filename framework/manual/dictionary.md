@@ -2,7 +2,7 @@
 
 字典组件在 0.7.0 统一“应用声明、Sysadmin 管理、应用读取”链路。应用通过 `DictionaryService` 读取本地缓存，避免每次展示或校验都访问管理服务。
 
-> **兼容性要求：** Framework `0.7.1` 需配合已合并 [base-sysadmin #17](https://github.com/opensabre/base-sysadmin/pull/17) 与 [#18](https://github.com/opensabre/base-sysadmin/pull/18) 的后端使用。该后端已于 2026-07-29 部署验证；若使用更早的 Sysadmin 镜像，请保持 `registration-enabled=false`。
+> **兼容性要求：** Framework `1.1.1` 需配合已合并 [base-sysadmin #17](https://github.com/opensabre/base-sysadmin/pull/17) 与 [#18](https://github.com/opensabre/base-sysadmin/pull/18) 的后端使用。该后端已于 2026-07-29 部署验证；若使用更早的 Sysadmin 镜像，请保持 `registration-enabled=false`。
 
 ![字典组件架构](framework/assets/dictionary-component.svg)
 

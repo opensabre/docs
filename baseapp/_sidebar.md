@@ -10,18 +10,15 @@
   * [应用架构](baseapp/architecture/APPLICATION.md)
 
 * [用户手册](baseapp/manual/README.md)
-  - [base-organization]()
-  - [base-authorization]()
-  - [base-sysadmin]()
-  - [base-gateway-web]()
-  - [base-gateway-admin]()
+  - [base-organization](https://github.com/opensabre/base-organization/tree/main/docs)
+  - [base-authorization](https://github.com/opensabre/base-authorization/tree/main/docs)
+  - [base-sysadmin](https://github.com/opensabre/base-sysadmin/tree/main/docs)
+  - [base-gateway](https://github.com/opensabre/base-gateway/tree/main/docs)
+  - [base-gateway-admin](https://github.com/opensabre/base-gateway-admin/tree/main/docs)
+  - [opensabre-admin](https://github.com/opensabre/opensabre-admin/tree/main/docs)
 
 * [开发指南](baseapp/develop/README.md)
-  - [使用文档]()
-
-* [生产部署]()
-
-* [部署运维](baseapp/deploy.md)
+* [生产部署](https://github.com/opensabre/base-k8s/blob/main/README.md)
 
 * [常见问题](baseapp/QUESTION.md)
 
