@@ -1,5 +1,5 @@
 # 应用架构
 
-## 应用架构
+![OpenSabre 框架架构图](framework/assets/opensabre-architecture.svg)
 
-<iframe id="embed_dom" name="embed_dom" frameborder="0" style="display:block;width:600px; height:650px;" src="https://www.processon.com/embed/64e76a656b2cbb581a370e03"></iframe>
+图中上层展示认证、组织、审计等基础应用，中层展示可复用的微服务框架能力，下层展示配置中心、注册中心和应用网关等基础设施。

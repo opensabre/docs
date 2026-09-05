@@ -1,7 +1,8 @@
 # 应用架构设计
 
 ## 1. 架构全景图
-![应用架构图](architecture.png)
+
+![应用架构图](framework/assets/opensabre-architecture.svg)
 
 ## 2. 分层架构
 | 层级 | 组件 | 功能描述 |
