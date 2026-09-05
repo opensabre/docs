@@ -25,12 +25,12 @@
     <rect class="app-item" x="12" y="35" width="102" height="36"/><text class="item-text" x="63" y="53">用户授权</text>
     <rect class="app-item" x="12" y="87" width="102" height="36"/><text class="item-text" x="63" y="105">用户鉴权</text>
     <rect class="planned" x="12" y="139" width="102" height="36"/><text class="item-text" x="63" y="157">凭证管理</text>
-    <rect class="planned" x="12" y="191" width="102" height="36"/><text class="item-text" x="63" y="209">客户端管理</text>
+    <rect class="app-item" x="12" y="191" width="102" height="36"/><text class="item-text" x="63" y="209">客户端管理</text>
   </g>
   <g transform="translate(214 52)">
     <rect class="group" width="132" height="140"/><text class="group-title" x="8" y="22">错误码管理</text>
-    <rect class="planned" x="16" y="35" width="100" height="36"/><text class="item-text" x="66" y="53">错误码收集</text>
-    <rect class="planned" x="16" y="87" width="100" height="36"/><text class="item-text" x="66" y="105">错误码查询</text>
+    <rect class="app-item" x="16" y="35" width="100" height="36"/><text class="item-text" x="66" y="53">错误码收集</text>
+    <rect class="app-item" x="16" y="87" width="100" height="36"/><text class="item-text" x="66" y="105">错误码查询</text>
   </g>
   <g transform="translate(214 210)">
     <rect class="group" width="132" height="82"/><text class="group-title" x="8" y="22">短链接</text>
@@ -38,9 +38,9 @@
   </g>
   <g transform="translate(358 52)">
     <rect class="group" width="126" height="240"/><text class="group-title" x="8" y="22">字典管理</text>
-    <rect class="planned" x="16" y="35" width="94" height="36"/><text class="item-text" x="63" y="53">字典添加</text>
-    <rect class="planned" x="16" y="87" width="94" height="36"/><text class="item-text" x="63" y="105">字典引用</text>
-    <rect class="planned" x="16" y="139" width="94" height="36"/><text class="item-text" x="63" y="157">字典维护</text>
+    <rect class="app-item" x="16" y="35" width="94" height="36"/><text class="item-text" x="63" y="53">字典添加</text>
+    <rect class="app-item" x="16" y="87" width="94" height="36"/><text class="item-text" x="63" y="105">字典引用</text>
+    <rect class="app-item" x="16" y="139" width="94" height="36"/><text class="item-text" x="63" y="157">字典维护</text>
   </g>
   <g transform="translate(496 52)">
     <rect class="group" width="126" height="240"/><text class="group-title" x="8" y="22">密钥管理</text>
@@ -51,8 +51,8 @@
   </g>
   <g transform="translate(634 52)">
     <rect class="group" width="126" height="140"/><text class="group-title" x="8" y="22">验证码管理</text>
-    <rect class="planned" x="16" y="35" width="94" height="36"/><text class="item-text" x="63" y="53">验证码生成</text>
-    <rect class="planned" x="16" y="87" width="94" height="36"/><text class="item-text" x="63" y="105">验证码验证</text>
+    <rect class="app-item" x="16" y="35" width="94" height="36"/><text class="item-text" x="63" y="53">验证码生成</text>
+    <rect class="app-item" x="16" y="87" width="94" height="36"/><text class="item-text" x="63" y="105">验证码验证</text>
   </g>
   <g transform="translate(634 210)">
     <rect class="group" width="126" height="82"/><text class="group-title" x="8" y="22">工作流</text>
